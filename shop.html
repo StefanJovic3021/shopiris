@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>Iris WebStore</title>
+        <!--Potential names-->
+        <!--Cameranest, Cameragenix, Iris, Pardo Lenses-->
+    <!-- Essentials -->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="camera, photography, lenses, iris, photo, polaroid"/>
+    <meta name="author" content="Stefan Jović">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+    <!-- Web-Icons -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>
+    <!-- CSS Slick Slider jQuery Plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS (Using SASS) -->
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo"><h1>IRIS SHOP</h1></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="activeLink">Shop</li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="author.html">About author</a></li>
+            </ul>
+        </nav>
+        <div id="navOptions">
+            <a href="registration.html"><div id="accountOption">
+                <i class="las la-user-circle"></i>
+            </div></a>
+            <a href="cart.html"><div id="cartOption">
+                <i class="las la-shopping-cart"></i>
+                <div id="bubbleNum">
+                    <p id="bubbleNumValue">3</p>
+                </div>
+            </div></a>
+        </div>
+    </header>
+    <main>
+        <div id="shopHolder" class="mainBlock">
+            <div id="standardHeader" class="mainBlock">
+                <div id="standardHeaderLeft">
+                    <h2>Shop</h2>
+                    <span>Home</span> > <span>Shop</span>
+                </div>
+                <div id="standardHeaderRight"></div>
+            </div>
+            <div id="shopMain">
+                <div id="shopLeftSB">
+                    <form action="orders.php" method="GET" id="filterForm">
+                        <div class="filterBlock">
+                            <div class="filterHead">
+                                <h3>Search</h3>
+                                <div class="filterHeadUnderline"></div>
+                            </div>
+                            <div class="filterBody" id="search">
+                                <div id="filterSearch">
+                                    <input type="text" id="inputSearch" placeholder="Search" /><i class="las la-search" id="startSearchBtn"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filterBlock">
+                            <div class="filterHead">
+                                <h3>Device Types</h3>
+                                <div class="filterHeadUnderline"></div>
+                            </div>
+                            <div class="filterBody" id="types">
+                            </div>
+                        </div>
+                        <div class="filterBlock">
+                            <div class="filterHead">
+                                <h3>Brands</h3>
+                                <div class="filterHeadUnderline"></div>
+                            </div>
+                            <div class="filterBody">
+                                <ul id="filterChooseBrand">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filterBlock">
+                            <div class="filterHead">
+                                <h3>Price</h3>
+                                <div class="filterHeadUnderline"></div>
+                            </div>
+                            <div class="filterBody">
+                                <div id="filterPrice">
+                                    <input type="range" id="inputPriceRange" step="1" />
+                                </div>
+                                <div id="filterPriceControls">
+                                    <div id="minPriceBox">
+                                        <p>$</p><input type="number" id="minPriceInput" value="0" />
+                                    </div>
+                                    <p>-</p>
+                                    <div id="maxPriceBox">
+                                        <p>$</p><input type="number" id="maxPriceInput" value="5000" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filterBlock">
+                            <div class="filterHead">
+                                <h3>Sale</h3>
+                                <div class="filterHeadUnderline"></div>
+                            </div>
+                            <div class="filterBody" id="sales">
+                                <ul id="filterSale">
+                                    <li class="saleItem" data-id="0">Not on sale</li>
+                                    <li class="saleItem" data-id="1">On sale</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="shopRightSB">
+                    <div id="shopSortControls">
+                        <div id="layoutCtrl">
+                            <i class="las la-table"></i>
+                            <i class="las la-bars"></i>
+                            <p>Showing 12 od x</p>
+                        </div>
+                        <div id="sortCtrl">
+                            <form>
+                                <label>Sort by: </label>
+                                <select id="sortList"></select>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="shopProductsHolder">
+                        <div class="shopProduct">
+                            <div class="productHead">
+                                <img src="images/firstProduct.jpg" alt="1" class="productImage" />
+                            </div>
+                            <div class="productBody">
+                                <p class="productName">Sony a7 III with 28-70mm f3.5-5.6 OSS Mirrorless Kit</p>
+                                <p class="productBrand">Sony</p>
+                                <div class="productPrices">
+                                    <p class="currentPrice">$2,499.00</p>
+                                    <p class="oldPrice">$2,799.00</p>
+                                </div>
+                                <p class="productRating">
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shopProduct">
+                            <div class="productHead">
+                                <img src="images/secondProduct.jpg" alt="2" class="productImage" />
+                                <div class="productHeadDiscounts">
+                                    <div class="discountName">
+                                        <p>Black Friday</p>
+                                    </div>
+                                    <div class="discountDesc">
+                                        <p>66% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="productHeadControls">
+                                    <div class="addToCartHover">
+                                        <i class="las la-cart-arrow-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="productBody">
+                                <p class="productName">Canon EOS R6 Body</p>
+                                <p class="productBrand">Canon</p>
+                                <div class="productPrices">
+                                    <p class="currentPrice">$2,999.00</p>
+                                    <p class="oldPrice">$3,199.00</p>
+                                </div>
+                                <p class="productRating">
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorGray"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shopProduct">
+                            <div class="productHead">
+                                <img src="images/thirdProduct.jpg" alt="3" class="productImage" />
+                            </div>
+                            <div class="productBody">
+                                <p class="productName">Pentax K-70 with DA 18-135mm f3.5-5.6 WR</p>
+                                <p class="productBrand">Pentax</p>
+                                <div class="productPrices">
+                                    <p class="currentPrice">$969.32</p>
+                                    <p class="oldPrice">$1,147.32</p>
+                                </div>
+                                <p class="productRating">
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorGray"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shopProduct">
+                            <div class="productHead">
+                                <img src="images/fourthProduct.jpg" alt="4" class="productImage" />
+                            </div>
+                            <div class="productBody">
+                                <p class="productName">Nikon D780 Body</p>
+                                <p class="productBrand">Nikon</p>
+                                <div class="productPrices">
+                                    <p class="currentPrice">$2,599.00</p>
+                                    <p class="oldPrice">$2,999.00</p>
+                                </div>
+                                <p class="productRating">
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorBlack"></i>
+                                    <i class="las la-star ratingColorGray"></i>
+                                    <i class="las la-star ratingColorGray"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footerHolder">
+            <div id="footerInfo">
+                <div class="footerInfoBlock">
+                    <h5>About Us</h5>
+                    <p>
+                        IRIS is not a big box store, or a faceless chain... or a personality-free zone. 
+                        IRIS is a group of people who are passionate about the things you're passionate 
+                        about—from photography, film, music and audio to art and technology, creating and imagining.
+                    </p>
+                    <h5>Follow us</h5>
+                    <ul id="socialBubblesHolder">
+                        <li><div class="socialBubble facebook"><i class="lab la-facebook-f"></i></div></li>
+                        <li><div class="socialBubble twitter"><i class="lab la-twitter"></i></div></li>
+                        <li><div class="socialBubble telegram"><i class="lab la-telegram"></i></div></li>
+                        <li><div class="socialBubble googlePlus"><i class="lab la-google-plus-g"></i></div></li>
+                        <li><div class="socialBubble linkedIn"><i class="lab la-linkedin-in"></i></div></li>
+                    </ul>
+                </div>
+                <div class="footerInfoBlock">
+                    <h5>Information</h5>
+                    <ul class="footerOptionsList">
+                        <li><div class="listLine"></div><p>About us</p></li>
+                        <li><div class="listLine"></div><p>Services</p></li>
+                        <li><div class="listLine"></div><p>Privacy Policy</p></li>
+                        <li><div class="listLine"></div><p>Website Documentation</p></li>
+                        <li><div class="listLine"></div><p>Terms & Conditions</p></li>
+                        <li><div class="listLine"></div><p>Return Policy</p></li>
+                    </ul>
+                </div>
+                <div class="footerInfoBlock">
+                    <h5>My Account</h5>
+                    <ul class="footerOptionsList">
+                        <li><div class="listLine"></div><p>My Account</p></li>
+                        <li><div class="listLine"></div><p>Cart</p></li>
+                        <li><div class="listLine"></div><p>Checkout</p></li>
+                        <li><div class="listLine"></div><p>Contact</p></li>
+                        <li><div class="listLine"></div><p>Validation</p></li>
+                        <li><div class="listLine"></div><p>Wishlist</p></li>
+                    </ul>
+                </div>
+                <div class="footerInfoBlock">
+                    <h5>Get In Touch</h5>
+                    <ul class="footerOptionsList">
+                        <li><i class="las la-home"></i><p>14 Tottenham Road, London, England.</p></li>
+                        <li><i class="las la-phone"></i><p>(102) 6666 8888</p></li>
+                        <li><i class="las la-envelope"></i><p>shopiris@gmail.com</p></li>
+                        <li><i class="las la-fax"></i><p>(102) 8888 9999</p></li>
+                    </ul>
+                    <div id="paymentOptions">
+                        <ul>
+                            <li><img src="" alt="" /></li>
+                            <li><img src="" alt="" /></li>
+                            <li><img src="" alt="" /></li>
+                            <li><img src="" alt="" /></li>
+                            <li><img src="" alt="" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="footerSeparator"></div>
+            <div id="footerEnd">
+                <span>Copyright &copy; 2023 IRIS - Stefan Jović</span>
+            </div>
+        </div>
+    </footer>
+
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
