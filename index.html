@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>Iris WebStore</title>
+        <!--Potential names-->
+        <!--Cameranest, Cameragenix, Iris, Pardo Lenses-->
+    <!-- Essentials -->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="camera, photography, lenses, iris, photo, polaroid"/>
+    <meta name="author" content="Stefan Jović">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+    <!-- Web-Icons -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>
+    <!-- CSS Slick Slider jQuery Plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS (Using SASS) -->
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo"><h1>IRIS SHOP</h1></a>
+        <nav>
+            <ul>
+                <li class="activeLink">Home</li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="author.html">About author</a></li>
+            </ul>
+        </nav>
+        <div id="navOptions">
+            <a href="registration.html"><div id="accountOption">
+                <i class="las la-user-circle"></i>
+            </div></a>
+            <a href="cart.html"><div id="cartOption">
+                <i class="las la-shopping-cart"></i>
+                <div id="bubbleNum">
+                    <p id="bubbleNumValue">3</p>
+                </div>
+            </div></a>
+        </div>
+    </header>
+    <main>
+        <div id="mainBanner" class="mainBlock">
+            <div class="pictureCarousel">
+                <img src="/images/bannerPrototype1.jpg" alt="Image1" />
+                <img src="/images/bannerPrototype2.jpg" alt="Image2" />
+                <img src="/images/bannerPrototype3.jpg" alt="Image3" />
+            </div>
+           <div id="bannerUI" style="display: none;">
+                <div id="bannerHeading">
+                    <h2>Capture your beautiful moments</h2>
+                </div>
+                <div id="bannerControl">
+                    <a href="shop.html"><div id="bannerButton"><i class="las la-shopping-cart"></i> BUY NOW</div></a>
+                </div>
+           </div>
+        </div>
+        <div id="specialOffers" class="mainBlock">
+            <div class="offerObject"><a href="shop.html"><img src="images/mega-sale-01.png" alt="1" class="offerImg"/></a></div>
+            <div class="offerObject bigColumn"><a href="shop.html"><img src="images/mega-sale-03.png" alt="2" class="offerImg"/></a></div>
+            <div class="offerObject"><a href="shop.html"><img src="images/mega-sale-02.png" alt="3" class="offerImg"/></a></div>
+        </div>
+        <div id="newsLetter" class="mainBlock">
+            <div id="newsLetter-back">
+                <div id="newsLetter-left">
+                    <div id="newsLetter-subscribe">
+                        <div id="newsLetter-heading">
+                            <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                            <h5>GET UPDATES FOR NEWS AND OFFERS</h5>
+                        </div>
+                        <div id="newsLetter-email">
+                            <form action="obrada.php" method="GET">
+                                <div id="inputEmail">
+                                    <input type="email" name="newsLetterEmail" id="newsLetterEmail" placeholder="Enter your email here"/>
+                                    <i class="lab la-telegram-plane"></i>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="newsLetter-right">
+                    <img src="/images/powerShotNewsLetter.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div id="whyUs" class="mainBlock extraMargins">
+            <div class="whyUsItem">
+                <div class="whyUsItem-Icon">
+                    <i class="las la-shipping-fast"></i>
+                </div>
+                <div class="whyUsItem-text">
+                    <h5>Free home delivery</h5>
+                    <p>Provide free home delivery for the all products over $100</p>
+                </div>
+            </div>
+            <div id="whyUsSeparator"></div>
+            <div class="whyUsItem">
+                <div class="whyUsItem-Icon">
+                    <i class="las la-medal"></i>
+                </div>
+                <div class="whyUsItem-text">
+                    <h5>Quality Products</h5>
+                    <p>We ensure the product quality that is our main goal</p>
+                </div>
+            </div>
+            <div id="whyUsSeparator"></div>
+            <div class="whyUsItem">
+                <div class="whyUsItem-Icon">
+                    <i class="las la-sync-alt"></i>
+                </div>
+                <div class="whyUsItem-text">
+                    <h5>3 Days Return</h5>
+                    <p>Our Return Policy is very simple and easy for all</p>
+                </div>
+            </div>
+            <div id="whyUsSeparator"></div>
+            <div class="whyUsItem">
+                <div class="whyUsItem-Icon">
+                    <i class="las la-headset"></i>
+                </div>
+                <div class="whyUsItem-text">
+                    <h5>Online Support</h5>
+                    <p>Provide 24/7 online support for any information</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footerHolder">
+            <div id="footerInfo">
+                <div class="footerInfoBlock">
+                    <h5>About Us</h5>
+                    <p>
+                        IRIS is not a big box store, or a faceless chain... or a personality-free zone. 
+                        IRIS is a group of people who are passionate about the things you're passionate 
+                        about—from photography, film, music and audio to art and technology, creating and imagining.
+                    </p>
+                    <h5>Follow us</h5>
+                    <ul id="socialBubblesHolder">
+                        <li><a href="https://www.facebook.com"><div class="socialBubble facebook"><i class="lab la-facebook-f"></i></div></a></li>
+                        <li><a href="https://www.twitter.com"><div class="socialBubble twitter"><i class="lab la-twitter"></i></div></a></li>
+                        <li><a href="https://www.telegram.org"><div class="socialBubble telegram"><i class="lab la-telegram"></i></div></a></li>
+                        <li><a href="https://www.gmail.com"><div class="socialBubble googlePlus"><i class="lab la-google-plus-g"></i></div></a></li>
+                        <li><a href="https://www.linkedin.com"><div class="socialBubble linkedIn"><i class="lab la-linkedin-in"></i></div></a></li>
+                    </ul>
+                </div>
+                <div class="footerInfoBlock">
+                    <h5>Information</h5>
+                    <ul class="footerOptionsList">
+                        <li><div class="listLine"></div><p>About us</p></li>
+                        <li><div class="listLine"></div><p>Services</p></li>
+                        <li><div class="listLine"></div><p>Privacy Policy</p></li>
+                        <li><div class="listLine"></div><p>Website Documentation</p></li>
+                        <li><div class="listLine"></div><p>Terms & Conditions</p></li>
+                        <li><div class="listLine"></div><p>Return Policy</p></li>
+                    </ul>
+                </div>
+                <div class="footerInfoBlock">
+                    <h5>My Account</h5>
+                    <ul class="footerOptionsList">
+                        <li><div class="listLine"></div><p>My Account</p></li>
+                        <li><div class="listLine"></div><p>Cart</p></li>
+                        <li><div class="listLine"></div><p>Checkout</p></li>
+                        <li><div class="listLine"></div><p>Contact</p></li>
+                        <li><div class="listLine"></div><p>Validation</p></li>
+                        <li><div class="listLine"></div><p>Wishlist</p></li>
+                    </ul>
+                </div>
+                <div class="footerInfoBlock">
+                    <h5>Get In Touch</h5>
+                    <ul class="footerOptionsList">
+                        <li><i class="las la-home"></i><p>14 Tottenham Road, London, England.</p></li>
+                        <li><i class="las la-phone"></i><p>(102) 6666 8888</p></li>
+                        <li><i class="las la-envelope"></i><p>shopiris@gmail.com</p></li>
+                        <li><i class="las la-fax"></i><p>(102) 8888 9999</p></li>
+                    </ul>
+                    <div id="paymentOptions">
+                        <ul>
+                            <li><img src="" alt="" /></li>
+                            <li><img src="" alt="" /></li>
+                            <li><img src="" alt="" /></li>
+                            <li><img src="" alt="" /></li>
+                            <li><img src="" alt="" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="footerSeparator"></div>
+            <div id="footerEnd">
+                <span>Copyright &copy; 2023 IRIS - Stefan Jović</span>
+            </div>
+        </div>
+    </footer>
+
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
