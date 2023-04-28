@@ -1,0 +1,30 @@
+[
+    {
+        "id": "0",
+        "name": "Compact Cameras"
+    },
+    {
+        "id": "1",
+        "name": "Creative Film Cameras"
+    },
+    {
+        "id": "2",
+        "name": "Instant Cameras"
+    },
+    {
+        "id": "3",
+        "name": "Medium Format Cameras"
+    },
+    {
+        "id": "4",
+        "name": "Mirrorless System Cameras"
+    },
+    {
+        "id": "5",
+        "name": "Rangefinder Cameras"
+    },
+    {
+        "id": "6",
+        "name": "SLR Cameras"
+    }
+]

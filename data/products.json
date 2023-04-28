@@ -1,0 +1,830 @@
+[
+    {
+        "id": "0",
+        "name": "Canon EOS 5D Mark IV Body",
+        "brandId": "0",
+        "mainImage": {
+            "src": "Canon-EOS-5D-Mark-IV_500x/Canon-EOS-5D-Mark-IV_500x.jpg",
+            "alt": "Canon EOS 5D Mark IV image"
+        },
+        "imagesId": "0",
+        "categoryId": ["1", "4"],
+        "description": "The robust and powerful Canon EOS 5D Mark IV is designed with professionals in mind, boasting a 30.4-megapixel full-frame sensor, Canon’s incredible Dual Pixel CMOS AF system, and the DIGIC 6+ image processor. These features combine to provide high-resolution stills and 4K video with the clarity and detail you demand from your files. From a bride walking down the aisle to an athlete at the peak of their game, the 5D Mark IV delivers professional grade results every time.",
+        "specificationsId": "0",
+        "boxContent": [
+            "EOS 5D Mark IV Body",
+            "Battery Pack LP-E6N",
+            "Battery Charger LP-E6",
+            "Eyecup Eg (Not shown)",
+            "Wide Strap",
+            "Cable Protector",
+            "Interface Cable IFC-150U II",
+            "EOS DIGITAL Solution Disk (Not shown)"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "279900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "256000"
+            },
+            {
+                "priceDate": "2023-03-09",
+                "priceValue": "329900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "1"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2016-09-06",
+        "rating": "4"
+    },
+    {
+        "id": "1",
+        "name": "Canon EOS R5 Body",
+        "brandId": "0",
+        "mainImage": {
+            "src": "Canon-EOS-R5-Body_500x/Canon-EOS-R5-Body_500x.jpg",
+            "alt": "Canon EOS R5 Body image"
+        },
+        "imagesId": "1",
+        "categoryId": ["4"],
+        "description": "The Canon EOS R5 is a high-resolution full-frame mirrorless camera. Decked out with professional photo and video capabilities and built-in image stabilization. With a high-resolution 45-megapixel full-frame sensor, 8K video recording, and Dual Pixel CMOS AF II autofocus, the R5 will deliver the results you want time and time again. The durable, weather-resistant body keeps you shooting in any condition.",
+        "specificationsId": "1",
+        "boxContent": [
+            "Canon EOS R5 mirrorless camera",
+            "LP-E6NH battery",
+            "LC-E6 battery charger",
+            "Wide strap",
+            "Cable protector",
+            "IFC-100U USB cable",
+            "Camera cover R-F-5"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "279900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "256000"
+            },
+            {
+                "priceDate": "2023-03-09",
+                "priceValue": "529900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2018-10-06",
+        "rating": "5"
+    },
+    {
+        "id": "2",
+        "name": "Canon EOS R6 Body",
+        "brandId": "0",
+        "mainImage": {
+            "src": "Canon-EOS-R6-Body_500x/Canon-EOS-R6-Body_500x.jpg",
+            "alt": "Canon EOS R6 Body image"
+        },
+        "imagesId": "2",
+        "categoryId": ["3", "4"],
+        "description": "The Canon EOS R6 is built to keep up with everyday photography and video. With a powerful 20-megapixel CMOS sensor and the versatile DIGIC X processor, the EOS R6 can handle everything from high-speed action photography to cinematic 4K video production. Dual Pixel CMOS AF II autofocus and a 5-axis, in-body image stabilization system keeps your photos and video sharp and in-focus.",
+        "specificationsId": "2",
+        "boxContent": [
+            "Canon EOS R6 mirrorless camera",
+            "LP-E6H battery",
+            "LC-E6 charger",
+            "Wide strap",
+            "Camera cover R-F-5"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "279900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "256000"
+            },
+            {
+                "priceDate": "2023-03-09",
+                "priceValue": "319900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "1"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2010-10-06",
+        "rating": "3"
+    },
+    {
+        "id": "3",
+        "name": "Canon Powershot G7 X Mark II",
+        "brandId": "0",
+        "mainImage": {
+            "src": "Canon-Powershot-G7-X-Mark-II/Canon-Powershot-G7-X-Mark II_500x.jpg",
+            "alt": "Canon Powershot G7 X Mark II image"
+        },
+        "imagesId": "3",
+        "categoryId": "0",
+        "description": "Stay inspired with the PowerShot G7 X Mark II camera, which combines exhilarating speed and performance with a smart, compact design. It can be ideal for travel, events and anywhere on the go, or as a secondary camera, and features a high-performance 1.0-inch 20.1 Megapixel CMOS sensor as well as a bright f1.8-2.8 lens to help capture impressive images whenever your creativity sparks, even in low light conditions. The DIGIC 7 Image Processor immediately pays dividends with improved auto focus tracking, enhanced IS and superb image clarity even when shooting with a high ISO. For increased flexibility, the PowerShot G7 X Mark II offers high-speed continuous shooting up to 8 fps in RAW, JPEG and RAW+JPEG modes, and is equipped with Full HD capability, built-in Wi-Fi and NFC and in-camera RAW conversion, giving you everything you need to capture inspiring images and video and share them with ease.",
+        "specificationsId": "3",
+        "boxContent": [
+            "PowerShot G7 X Mark II",
+            "Battery Pack NB-13L",
+            "Battery Charger CB-2LH",
+            "Wrist Strap WS-DC12"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2023-03-09",
+                "priceValue": "79900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2011-10-06",
+        "rating": "2"
+    },
+    {
+        "id": "4",
+        "name": "Sony a7 III Mirrorless Body",
+        "brandId": "1",
+        "mainImage": {
+            "src": "Sony-a7-III-Mirrorless-Body/Sony-a7-III-Mirrorless-Body_500x.jpg",
+            "alt": "Sony a7 III Mirrorless Body image"
+        },
+        "imagesId": "4",
+        "categoryId": ["1", "4"],
+        "description": "The Sony a7 III is one of Sony's most popular and accessible full-frame mirrorless cameras. It features an impressive back-illuminated full-frame CMOS sensor and high-speed responsiveness in a reliable and easy-to-use package that’s ready to meet your photographic needs. The a7 III gives you power, precision, and flexibility for your photographic journeys.",
+        "specificationsId": "4",
+        "boxContent": [
+            "Sony A7 III Mirrorless Camera Body",
+            "AC Adaptor AC-UUD12",
+            "Accessory shoe cap",
+            "Body cap",
+            "Eyepiece cup",
+            "Micro USB cable",
+            "Rechargeable Battery NP-FZ100",
+            "Shoulder strap"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2023-03-09",
+                "priceValue": "259900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "1"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2013-11-20",
+        "rating": "5"
+    },
+    {
+        "id": "5",
+        "name": "Sony a7 III with 28-70mm f3.5-5.6 OSS Mirrorless Kit",
+        "brandId": "1",
+        "mainImage": {
+            "src": "Sony-a7-III-with-28-70mm-f3.5-5.6-OSS-Mirrorless-Kit/Sony-a7-III-with-28-70mm-f3.5-5.6-OSS-Mirrorless-Kit_500x.jpg",
+            "alt": "Sony a7 III with 28-70mm f3.5-5.6 OSS Mirrorless Kit image"
+        },
+        "imagesId": "5",
+        "categoryId": ["4"],
+        "description": "The Sony a7 III is one of Sony's most popular and accessible full-frame mirrorless cameras. It features an impressive back-illuminated full-frame CMOS sensor and high-speed responsiveness in a reliable and easy-to-use package that’s ready to meet your photographic needs. The a7 III gives you power, precision, and flexibility for your photographic journeys.",
+        "specificationsId": "5",
+        "boxContent": [
+            "Sony A7 III Mirrorless Camera Body",
+            "Sony 28-70mm f3.5-5.6 OSS Lens",
+            "AC Adaptor AC-UUD12",
+            "Accessory shoe cap",
+            "Body cap",
+            "Eyepiece cup",
+            "Lens cap",
+            "Lens hood",
+            "Lens rear cap",
+            "Micro USB cable",
+            "Rechargeable Battery NP-FZ100",
+            "Shoulder strap"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2023-03-09",
+                "priceValue": "279900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "1"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2015-11-20",
+        "rating": "5"
+    },
+    {
+        "id": "6",
+        "name": "Sony Cybershot DSC-RX100 III",
+        "brandId": "1",
+        "mainImage": {
+            "src": "Sony-Cybershot-DSC-RX100-III/Sony-Cybershot-DSC-RX100-III_500x.jpg",
+            "alt": "Sony Cybershot DSC-RX100 III image"
+        },
+        "imagesId": "6",
+        "categoryId": "0",
+        "description": "Astounding functionality meets exquisite image quality in the supremely compact RX100 III. Whenever photo opportunities arise, you can slip it from your pocket to enjoy a captivating 24mm wide-angle perspective, bright telephoto shooting at f2.8, ultra-high sensitivity in dimly lit environments, high-resolution viewfinder framing and exceptionally clear movie recording.",
+        "specificationsId": "6",
+        "boxContent": [
+            "Sony Cyber-shot DSC-RX100 III Digital Camera",
+            "Sony NP-BX1/M8 Rechargeable Lithium-Ion Battery Pack (3.6V, 1240mAh)",
+            "AC-UB10 AC Adapter",
+            "Micro USB Cable",
+            "Wrist Strap",
+            "Strap Adapter",
+            "Limited 1-Year Warranty"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2023-03-09",
+                "priceValue": "94900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2012-12-21",
+        "rating": "4"
+    },
+    {
+        "id": "7",
+        "name": "Sony ZV-E10 with 16-50mm f3.5-5.6",
+        "brandId": "1",
+        "mainImage": {
+            "src": "Sony-ZV-E10-with-16-50mm-f3.5-5.6/Sony-ZV-E10-Kit_500x.jpg",
+            "alt": "Sony ZV E10 Kit image"
+        },
+        "imagesId": "7",
+        "categoryId": "0",
+        "description": "Professional-looking vlogs are easy with the ZV-E10, thanks to a convenient, articulating LCD screen, built-in stereo microphone, and interchangeable lenses that capture the world however you choose to see it.",
+        "specificationsId": "7",
+        "boxContent": [
+            "Sony ZV-E10 Body",
+            "Body cap",
+            "NP-FW50 battery",
+            "USB charger",
+            "USB-A to USB-C cable",
+            "Accessory shoe cap",
+            "Microphone windscreen",
+            "Shoulder strap"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2023-03-09",
+                "priceValue": "99900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2009-12-21",
+        "rating": "3"
+    },
+    {
+        "id": "8",
+        "name": "Nikon D850 Body",
+        "brandId": "2",
+        "mainImage": {
+            "src": "Nikon-D850-Body/Nikon-D850-Body_500x.jpg",
+            "alt": "Nikon D850 Body image"
+        },
+        "imagesId": "8",
+        "categoryId": ["1", "5"],
+        "description": "The Nikon D850 DSLR camera is a multi-media powerhouse. Featuring a massive 45.7-megapixel full-frame sensor featuring back-side illumination and no optical low-pass filter for incredibly sharp and detailed images. Enhanced efficiency and incredible data readout speeds mean all that resolution won't slow you down while the robust and durable body ensures the reliability you demand.",
+        "specificationsId": "8",
+        "boxContent": [
+            "EN-EL15a Rechargeable Lithium-Ion Battery",
+            "MH-25A Battery Charger",
+            "UC-E22 USB 3.0 Cable",
+            "HDMI/USB Cable Clip",
+            "AN-DC18 Camera Strap",
+            "BF-1B Body Cap",
+            "DK-17F Fluorine-Coated Finder Eyepiece"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2023-03-09",
+                "priceValue": "389900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "1"
+            }
+        ],
+        "dateAdded": "2020-07-09",
+        "rating": "2"
+    },
+    {
+        "id": "9",
+        "name": "Nikon Z6 with 24-70mm f4S",
+        "brandId": "2",
+        "mainImage": {
+            "src": "Nikon-Z6-with-24-70mm-f4S/Nikon-Z6-with-24-70mm-f4S_500x.jpg",
+            "alt": "Nikon Z6 with 24-70mm f4S image"
+        },
+        "imagesId": "9",
+        "categoryId": ["0"],
+        "description": "Adaptability. It's about remaining fluid, open. Preparing for nothing, but being ready for anything.Thriving in whatever situation comes along. The Z6 is perhaps the most adaptable camera we've ever created. It's at the sweet spot of speed,resolution and low-light performance. All combined with the advantages of a lightweight mirrorless design, a revolutionary new full-frame lens mount with matched lenses and seamless integration with Nikon's DSLR system-including the F-Mount NIKKOR lenses you love. This is mirrorless versatility as only Nikon could create.",
+        "specificationsId": "9",
+        "boxContent": [
+            "EN-EL15b Rechargeable Lithium-Ion Battery",
+            "MH-25A Battery Charger",
+            "UC-E24 USB Cable",
+            "HDMI/USB Cable Clip",
+            "BS-1 Hot-Shoe Cover",
+            "AN-DC19 Camera Strap",
+            "BF-N1 Body Cap",
+            "DK-29 Rubber Eyecup"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2024-03-09",
+                "priceValue": "299900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2021-07-09",
+        "rating": "5"
+    },
+    {
+        "id": "10",
+        "name": "Nikon D7500 with 18-140mm f3.5-5.6 VR",
+        "brandId": "2",
+        "mainImage": {
+            "src": "Nikon-D7500-with-18-140mm-f3.5-5.6-VR/Nikon-D7500-with-18-140mm-f3.5-5.6-VR_500x.jpg",
+            "alt": "Nikon D7500 with 18-140mm f3.5-5.6 VR image"
+        },
+        "imagesId": "10",
+        "categoryId": ["1", "6"],
+        "description": "With impressive autofocus performance, incredible image quality, and 4K Ultra HD video, and a rugged design, the D7500 is a no-compromise DSLR that helps you follow your passion where it leads. This is a camera for the new generation of creators, born from a need for flagship performance and innovation in a more streamlined package.",
+        "specificationsId": "10",
+        "boxContent": [
+            "EN-EL15a Rechargeable Li-ion Battery",
+            "MH-25A Battery Charger",
+            "UC-E20 USB Cable",
+            "AN-DC3 Strap",
+            "DK-5 Eyepiece Cap",
+            "DK-28 Rubber Eyecup",
+            "BF-1B Body Cap"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2024-03-09",
+                "priceValue": "159900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2023-07-09",
+        "rating": "4"
+    },
+    {
+        "id": "11",
+        "name": "Panasonic Lumix DC-G9 Body",
+        "brandId": "3",
+        "mainImage": {
+            "src": "Panasonic-Lumix-DC-G9-Body/Panasonic-Lumix-DC-G9-Body_500x.jpg",
+            "alt": "Panasonic Lumix DC-G9 Body image"
+        },
+        "imagesId": "11",
+        "categoryId": "4",
+        "description": "Panasonic has taken a massive leap forward with their new flagship G9, offering a more balanced model that offers a host of features for photographers and videographers alike. The brilliant new iteration of Panasonic’s acclaimed Venus Engine processor provides blistering speed, the fastest autofocus yet, and clean images even at high ISO levels, all packed inside a rugged chassis that’s weather and dust resistant.",
+        "specificationsId": "11",
+        "boxContent": [
+            "Panasonic Lumix DC-G9 Mirrorless Camera Body",
+            "DMW-BLF19 Rechargeable Lithium-Ion Battery",
+            "DMW-BTC13 Battery Charger",
+            "Body Cap",
+            "USB Cable",
+            "Shoulder Strap",
+            "Cable Holder"
+        ],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2024-03-09",
+                "priceValue": "129900"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "1"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2020-05-10",
+        "rating": "5"
+    },
+    {
+        "id": "12",
+        "name": "Polaroid Now+ i-Type Instant Camera",
+        "brandId": "4",
+        "mainImage": {
+            "src": "Polaroid-Now-i-Type-Instant-Camera/Polaroid-Now-Plus_500x.jpg",
+            "alt": "Polaroid Now+ i-Type Instant Camera image"
+        },
+        "imagesId": "12",
+        "categoryId": "2",
+        "description": "Polaroid's most creative camera yet. The Polaroid Now+ is a revamped analog instant camera with even more creative tools. Get 5 new lens filters, and unlock two extra tools — aperture priority and tripod mode — inside the Polaroid mobile app. Try light painting, double exposure, manual mode and more. Plus a tripod mount to steady your ideas inside the original Polaroid square format frame.",
+        "specificationsId": "12",
+        "boxContent": [],
+        "prices": [
+            {
+                "priceDate": "2022-04-20",
+                "priceValue": "55900"
+            },
+            {
+                "priceDate": "2021-01-06",
+                "priceValue": "89900"
+            },
+            {
+                "priceDate": "2024-03-09",
+                "priceValue": "19999"
+            }
+        ],
+        "discounts": [
+            {
+                "discountName": "Spring sale",
+                "discountDesc": "35% OFF",
+                "discountAmmount": "35",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Winter sale",
+                "discountDesc": "45% OFF",
+                "discountAmmount": "45",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Summer sale",
+                "discountDesc": "50% OFF",
+                "discountAmmount": "50",
+                "discountActive": "0"
+            },
+            {
+                "discountName": "Black Friday",
+                "discountDesc": "66% OFF",
+                "discountAmmount": "66",
+                "discountActive": "0"
+            }
+        ],
+        "dateAdded": "2016-05-10",
+        "rating": "4"
+    }
+]
