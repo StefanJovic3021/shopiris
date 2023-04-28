@@ -1,0 +1,1380 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+//--FONTS
+@font-face {
+    font-family: 'Library3AM';
+    src: url("/fonts/Library_3_am.otf");
+}
+@font-face {
+    font-family: 'Corbert';
+    src: url("/fonts/Corbert-Regular.ttf");
+}
+
+//--VARIABLES
+/*COLORS*/
+$dark-gray: #151515;
+$cool-blue: #005eff;
+$light-gray: #ededed;
+
+//--MIXIN
+/*EMPTY*/
+
+.activeLink {
+    color:rgb(0, 94, 255);
+    font-weight: bold;
+}
+.mainBlock{
+    width: 80%;
+    //border: 1px solid red;
+    margin-bottom: 20px;
+}
+.offerObject{
+    background-color: rgb(114, 255, 255);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whyUsItem{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    .whyUsItem-Icon{
+        transition: 0.3s;
+        font-size: 50px;
+        padding: 5px;
+    }
+    .whyUsItem-text{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        h5{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+}
+.whyUsItem:hover{
+    .whyUsItem-Icon{
+        transition: 0.5s;
+        color:rgb(0, 94, 255);
+        transform: scale(1.05) rotateY(180deg);
+    }
+}
+.extraMargins{
+    margin: 50px 0px;
+}
+.footerInfoBlock{
+    h5{
+        font-size: 18px;
+        margin: 10px 0px;
+    }
+    p{
+        font-size: 14px;
+    }
+    width: 22%;
+    padding: 5px;
+    ul{
+        list-style-type: none;
+        li{
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+            cursor: pointer;
+        }
+    }
+    .footerOptionsList{
+        li:hover{
+            .listLine{
+                transition: 0.15s;
+                background-color: rgba(0, 55, 255, 0.499);
+                transform: scaleX(1.5);
+                margin-left: 3px;
+            }
+            p{
+                transition: 0.15s;
+                color: rgba(255, 255, 255, 0.499);
+                transform: translateX(8px);
+            }
+            i{
+                color: rgba(0, 55, 255, 0.499);
+                transform: scale(1.3);
+            }
+        }
+        i{
+            color: $cool-blue;
+            font-size: 25px;
+            margin-right: 10px;
+        }
+    }
+    #socialBubblesHolder{
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        a:visited{
+            color: #fff;
+        }
+        display: flex;
+        justify-content: flex-start;
+    }
+    .socialBubble{
+        font-size: 22px;
+        padding: 4px 10px;
+        border: 1px solid #fff;
+        border-radius: 100px;
+        margin-right: 7px;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    .socialBubble:hover{
+        transition: 0.2s;
+        i{
+            transition: 0.2s;
+            transform: scale(1.3);
+            color: #fff;
+        }
+    }
+    .facebook:hover{
+        background-color: #4267B2;
+    }
+    .twitter:hover{
+        background-color: #1DA1F2;
+    }
+    .telegram:hover{
+        background-color: #0088CC;
+    }
+    .googlePlus:hover{
+        background-color: #DB4437;
+    }
+    .linkedIn:hover{
+        background-color: #0A66C2;
+    }
+}
+.listLine{
+    margin-right: 4px;
+    width: 10px;
+    height: 2px;
+    background-color: $cool-blue;
+}
+.divLine{
+    margin: 10px auto;
+    width: 80%;
+    height: 0.1px;
+    background-color: rgba(0, 0, 0, 0.242);
+}
+.quantityControl{
+    transition: 0.2s;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+}
+.quantityControl:hover{
+    transition: 0.2s;
+    color: $cool-blue;
+}
+.importantField{
+    color: #f00;
+}
+.contactFormButtons{
+    cursor: pointer;
+    background-color: #000!important;
+    color: #fff;
+}
+.contactFormButtons:hover{
+    background-color: $cool-blue!important;
+}
+.contactFormButtons:active{
+    transform: scale(0.95);
+}
+.formButtonSuccess{
+    cursor: default!important;
+    background-color: $cool-blue!important;
+    color: #fff;
+    border: 1px solid $cool-blue!important;
+    width: max-content!important;
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+}
+.formButtonFailure{
+    cursor: default!important;
+    background-color: #f00!important;
+    color: #000;
+    border: 1px solid #f00!important;
+    width: max-content!important;
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+}
+.filterBlock{
+    width: 100%;
+    //padding: 10px;
+    .filterHead{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .filterHeadUnderline{
+            margin: 5px 0px;
+            width: 15%;
+            height: 2px;
+            background-color: #000;
+        }
+    }
+    .filterBody{
+        width: 100%;
+        margin: 10px 0px;
+        .filterCheckDevices{
+            *{
+                cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+            label{
+                transition: 0.2s;
+                user-select: none;
+                margin-left: 10px;
+                font-size: 17px;
+            }
+        }
+        .filterCheckDevices:hover{
+            label{
+                transition: 0.2s;
+                color: $cool-blue;
+            }
+        }
+    }
+}
+.shopProduct{
+    cursor: pointer;
+    width: 25%;
+    height: max-content;
+    transition: 0.2s;
+    border: 1px solid transparent;
+    .productHead{
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        .productImage{
+            transition: 0.2s;
+            width: 100%;
+        }
+        .productHeadDiscounts{
+            position: absolute;
+            top: 5%;
+            left: 0;
+            .discountName, .discountDesc{
+                text-align: left;
+                background-color: $dark-gray;
+                font-size: 11px;
+                color: #fff;
+                width: max-content;
+                margin: 5px 0px;
+            }
+            
+        }
+        .productHeadControls{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            align-items: center;
+            justify-content: center;
+            .addToCartHover{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 40px;
+                font-size: 35px;
+                padding: 8px;
+                background-color: #fff;
+                transition: 0.2s;
+                border: 1px solid transparent;
+            }
+            .addToCartHover:hover{
+                transition: 0.2s;
+                background-color: $cool-blue;
+                color: #fff;
+                border: 1px solid $cool-blue;
+                transform: scale(1.1);
+            }
+        }
+    }
+    .productHead:hover{
+        .productImage{
+            transition: 0.2s;
+            filter: brightness(0.8) blur(1px);
+        }
+    }
+    .productBody{
+        padding: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        .productName{
+            height: 46px;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 5px 0px;
+            width: 100%;
+        }
+        .productBrand{
+            font-size: 14px;
+            color: rgb(90, 90, 90);
+            font-weight: bold;
+        }
+        .productPrices{
+            display: flex;
+            .currentPrice{
+                font-size: 19px;
+                margin-right: 15px;
+                font-weight: bold;
+                color: #f00;
+            }
+            .oldPrice{
+                font-size: 14px;
+                color: rgb(90, 90, 90);
+                text-decoration: line-through;
+            }
+        }
+        .productRating{
+            .ratingColorBlack{
+                color: #000;
+            }
+            .ratingColorGray{
+                color: #7d7d7da7;
+            }
+        }
+    }
+}
+.shopProduct:hover{
+    transition: 0.2s;
+    background-color: rgba(236, 236, 236, 0.46);
+    border: 1px solid rgb(226, 226, 226);
+    transform: scale(1.05);
+}
+
+//Form and input disclaimers
+.inputHelp, .inputDisclaimer{
+    margin-top: 5px;
+    font-size: 15px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+.inputHelp{
+    color: $dark-gray;
+}
+.inputDisclaimer{
+    color: #f00;
+}
+.inputAlertAnim{
+    transition: 0.3s;
+    transform: scale(1.05) rotateZ(3deg);
+}
+.inputError, .registerError{
+    transition: 0.3s;
+    background-color: #ecdbdb!important;
+    border: 1px solid #f00!important;
+}
+.bubbleAnimation{
+    transition: 0.3s;
+    transform: scale(1.3);
+}
+.registerError{
+    input[type=text], input[type=email], input[type=password]{
+        transition: 0.3s;
+        background-color: #ecdbdb!important;
+    }
+}
+.registerErrorRadio{
+    input{
+        transition: 0.3s;
+        color: #f00;
+    }
+    label{
+        transition: 0.3s;
+        color: #f00;
+    }
+}
+.registerErrorSelect{
+    transition: 0.3s;
+    background-color: #ecdbdb!important;
+    border: 1px solid #f00!important;
+    select{
+        transition: 0.3s;
+        background-color: #ecdbdb!important;
+        color: #f00;
+    }
+}
+
+body {
+    header {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        padding: 25px;
+        font-family: 'Corbert';
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        //SHADOW
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        #logo{
+            text-decoration: none;
+            color: #000;
+            h1{
+                font-family: 'Library3AM';
+                font-size: 40px;
+            }
+        }
+        nav{
+            ul{
+                list-style-type: none;
+                display: flex;
+                li{
+                    user-select: none;
+                    font-size: 20px;
+                    margin: 0px 30px;
+                    cursor: pointer;
+                    transition: 0.2s;
+                    a{
+                        color: #000;
+                        transition: 0.2s;
+                        text-decoration: none;
+                    }
+                }
+                li:hover{
+                    transition: 0.2s;
+                    transform: translateY(-3px);
+                    a{
+                        transition: 0.2s;
+                        color: rgb(0, 94, 255);
+                    }
+                }
+            }
+        }
+        #navOptions{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            div{
+                display: flex;
+                align-items: center;
+                margin: 0px 10px;
+                font-size: 35px;
+                span{
+                    font-size: 18px;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+            #accountOption, #favoritesOption, #cartOption{
+                transition: 0.2s;
+                cursor: pointer;
+            }
+            #accountOption:hover, #favoritesOption:hover, #cartOption:hover{
+                transition: 0.2s;
+                color: rgb(0, 94, 255);
+                transform: translateY(-3px);
+            }
+            #cartOption{
+                position: relative;
+                #bubbleNum{
+                    position: absolute;
+                    text-align: center;
+                    top: -8px;
+                    right: -22px;
+                    padding: 2px 8px;
+                    border-radius: 20px;
+                    color: #fff;
+                    background-color: #f00;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /*INDEX*/
+        #mainBanner{
+            position: relative;
+            .pictureCarousel{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+            #bannerUI{
+                font-family: 'Corbert';
+                width: 50%;
+                position: absolute;
+                top: 0;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 50px;
+                #bannerHeading{
+                    width: 55%;
+                    h2{
+                        font-size: 40px;
+                    }
+                }
+                #bannerControl{
+                    margin-top: 20px;
+                    a{
+                        text-decoration: none;
+                    }
+                    #bannerButton{
+                        width: max-content;
+                        padding: 10px 30px;
+                        background-color: #000;
+                        color: #fff;
+                        border-radius: 20px;
+                        cursor: pointer;
+                        transition: 0.2s;
+                    }
+                    #bannerButton:hover{
+                        background-color: rgb(0, 94, 255);
+                        transform: translateX(5px);
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+        #specialOffers{
+            display: grid;
+            grid-template-columns: 23% 50% 23%;
+            justify-content: space-between;
+            img{
+                transition: 0.2s;
+                width: 100%;
+            }
+        }
+        #newsLetter{
+            font-family: 'Corbert';
+            #newsLetter-back{
+                width: 100%;
+                background-color: #ededed;
+                display: flex;
+                align-items: center;
+                padding: 50px 20px;
+                #newsLetter-left{
+                    display: flex;
+                    justify-content: center;
+                    width: 50%;
+                    #newsLetter-subscribe{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        #newsLetter-heading{
+                            h4{
+                                font-size: 33px;
+                            }
+                            h5{
+                                font-size: 27px;
+                            }
+                        }
+                        #newsLetter-email{
+                            width: 100%;
+                            form{
+                                #inputEmail{
+                                    margin-top: 20px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 13px 30px;
+                                    border: 1px solid rgba(128, 128, 128, 0.529);
+                                    border-radius: 25px;
+                                    input{
+                                        width: 90%;
+                                        font-family: 'Corbert';
+                                        font-size: 18px;
+                                        border: 0px;
+                                        background-color: transparent;
+                                    }
+                                    input:focus{
+                                        outline: none;
+                                    }
+                                    i{
+                                        transition: 0.2s;
+                                        font-size: 28px;
+                                        cursor: pointer;
+                                    }
+                                    i:hover{
+                                        transition: 0.2s;
+                                        color:rgb(0, 94, 255);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #newsLetter-right{
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 50%;
+                    img{
+                        width: 70%;
+                        //Image not draggable
+                        -webkit-user-drag: none;
+                        user-select: none;
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+                        -ms-user-select: none;
+                    }
+                }
+            }
+        }
+        #whyUs{
+            cursor: default;
+            user-select: none;
+            font-family: 'Corbert';
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            #whyUsSeparator{
+                margin: 0px 10px;
+                width: 2px;
+                border-radius: 10px;
+                background-color: rgba(128, 128, 128, 0.3);
+                height: 80px;
+            }
+        }
+        /*STANDARD HEADER*/
+        #standardHeader{
+            font-family: 'Corbert';
+            width: 100%;
+            height: 240px;
+            background-color: #ededed;
+            display: flex;
+            align-items: center;
+            #standardHeaderLeft{
+                opacity: 0;
+                width: 50%;
+                padding: 70px 150px;
+                user-select: none;
+                h2{
+                    font-size: 30px;
+                    margin: 10px 0px;
+                }
+                span{
+                    transition: 0.2s;
+                    color: $dark-gray;
+                    cursor: pointer;
+                }
+                span:hover{
+                    transition: 0.2s;
+                    color: $cool-blue;
+                }
+            }
+            #standardHeaderRight{
+                opacity: 0;
+                width: 50%;
+                height: 100%;
+                background-image: url("../images/compressed2.jpg");
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        /*ABOUT AUTHOR*/
+        #aboutAuthorHolder{
+            font-family: 'Corbert';
+            display: flex;
+            flex-direction: column;
+            #authorMain{
+                opacity: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                #authorMainText, #authorMainPortrait{
+                    width: 49%;
+                }
+                #authorMainText{
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        margin-bottom: 20px;
+                    }
+                    a{
+                        color: $cool-blue;
+                        text-decoration: none;
+                    }
+                    hr{
+                        margin-bottom: 60px;
+                    }
+                    #documentationButton{
+                        margin: 0px auto;
+                        width: max-content;
+                        padding: 15px 70px;
+                        border-radius: 15px;
+                        font-size: 18px;
+                        border: 1px solid rgb(182, 182, 182);
+                        color: #fff;
+                        background-color: #000;
+                        cursor: pointer;
+                        transition: 0.2s;
+                    }
+                    #documentationButton:hover{
+                        transition: 0.2s;
+                        transform: scale(1.03);
+                        border: 1px solid $cool-blue;
+                        background-color: $cool-blue;
+                        color: #fff;
+                    }
+                }
+                #authorMainPortrait{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        height: 700px;
+                        box-shadow: rgba(0, 94, 255, 0.4) 5px 5px, 
+                                    rgba(0, 94, 255, 0.3) 10px 10px, 
+                                    rgba(0, 94, 255, 0.2) 15px 15px, 
+                                    rgba(0, 94, 255, 0.1) 20px 20px, 
+                                    rgba(0, 94, 255, 0.05) 25px 25px;
+                    }
+                }
+            }
+        }
+        /*CART*/
+        #cartHolder{
+            font-family: 'Corbert';
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 200px;
+            #cartMain{
+                opacity: 0;
+                display: flex;
+                min-height: 40vh;
+                justify-content: space-between;
+                align-items: flex-start;
+                #cartTableHolder{
+                    // padding: 20px;
+                    // box-shadow: inset 0 0 15px 0 #c7c7c7;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    #emptyCartMessage{
+                        padding: 40px;
+                        margin-top: 100px;
+                        width: 50%;
+                        text-align: center;
+                        background-color: $light-gray;
+                        border: 2px solid #adadad;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                    width: 69%;
+                    table{
+                        border-collapse: collapse;
+                        width: 100%;
+                        th{
+                            text-align: center;
+                        }
+                        tr{
+                            td{
+                                text-align: center;
+                                padding: 10px 0px;
+                                img{
+                                    height: 100px;
+                                }
+                                border-bottom: 1px solid $light-gray;
+                            }
+                            td:nth-child(1){
+                                padding: 10px 20px;
+                                font-weight: bold;
+                            }
+                            td:nth-child(3){
+                                text-align: start;
+                            }
+                            td:nth-last-child(1){
+                                cursor: pointer;
+                                transition: 0.2s;
+                                font-size: 26px;
+                                color: red;
+                            }
+                            td:nth-last-child(1):hover{
+                                transition: 0.2s;
+                                transform: scale(1.1);
+                                color: rgb(0, 0, 0);
+                            }
+                        }
+                        tr:hover{
+                            background-color: rgba(244, 244, 244, 0.7);
+                        }
+                    }
+                }
+                #cartPanel{
+                    width: 29%;
+                    height: max-content;
+                    background-color: $light-gray;
+                    display: flex;
+                    flex-direction: column;
+                    #discountCodeSection{
+                        margin-top: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        #discountForm{
+                            display: flex;
+                            #discountInput{
+                                font-size: 18px;
+                                border-radius: 20px;
+                                padding: 5px 10px;
+                                padding-right: 30px;
+                                border: 1px solid #fff;
+                                -webkit-transition: all .2s ease-out;
+                                -moz-transition: all .2s ease-out;
+                                -ms-transition: all .2s ease-out;
+                                -o-transition: all .2s ease-out;
+                                transition: all 0.2s ease-out;
+                            }
+                            #discountInput:focus{
+                                outline: 0;
+                                transition: 0.2s;
+                                border: 1px solid $dark-gray;
+                            }          
+                            #applyDiscountButton{
+                                cursor: pointer;
+                                font-size: 18px;
+                                background-color: $dark-gray;
+                                border: 1px solid $dark-gray;
+                                color: #fff;
+                                padding: 0px 10px;
+                                border-radius: 20px;
+                                margin-left: -45px;
+                            }
+                            #applyDiscountButton:hover{
+                                transition: 0.2s;
+                                background-color: $cool-blue;
+                                border: 1px solid $cool-blue;
+                            }
+                        }
+                    }
+                    #totalSection{
+                        width: 80%;
+                        margin: 0px auto;
+                    }
+                    #orderSection{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        #checkoutFormButton{
+                            transition: 0.2s;
+                            cursor: default;
+                            display: flex;
+                            align-items: baseline;
+                            border: 1px solid rgb(119, 119, 119);
+                            border-radius: 30px;
+                            color: #fff;
+                            padding: 10px 40px;
+                            background-color: rgb(158, 158, 158);
+                            margin: 10px 0px;
+                        }
+                        #loginTip{
+                            color: rgb(81, 81, 81);
+                        }
+                        #loginTip:hover{
+                            color: rgb(116, 116, 116);
+                        }
+                        
+                    }
+                }
+            }
+        }
+        /*CONTACT*/
+        #contactHolder{
+            font-family: 'Corbert';
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 200px;
+            #contactMain{
+                opacity: 0;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                #contactSidePanel{
+                    width: 29%;
+                    height: 400px;
+                    background-color: $light-gray;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    #phoneSection, #addressSection, #webSection{
+                        width: 80%;
+                        margin: 0px auto;
+                    }
+                    #phoneSection{
+                        #phoneNumber, #faxNumber{
+                            cursor: default;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            i{
+                                font-size: 25px;
+                            }
+                            margin: 5px 0px;
+                            transition: 0.2s;
+                        }
+                        #phoneNumber:hover, #faxNumber:hover{
+                            i{
+                                transition: 0.2s;
+                                color: $cool-blue;
+                            }
+                            p{
+                                transition: 0.2s;
+                                transform: translateX(10px);
+                            }
+                        }
+                    }
+                    #addressSection{
+                        #locationAddress{
+                            cursor: default;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            i{
+                                font-size: 25px;
+                            }
+                            margin: 5px 0px;
+                            transition: 0.2s;
+                        }
+                        #locationAddress:hover{
+                            i{
+                                transition: 0.2s;
+                                color: $cool-blue;
+                            }
+                            p{
+                                transition: 0.2s;
+                                transform: translateX(10px);
+                            }
+                        }
+                    }
+                    #webSection{
+                        #emailAddress, #webAddress{
+                            cursor: default;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            i{
+                                font-size: 25px;
+                            }
+                            margin: 5px 0px;
+                            transition: 0.2s;
+                        }
+                        #emailAddress:hover, #webAddress:hover{
+                            i{
+                                transition: 0.2s;
+                                color: $cool-blue;
+                            }
+                            p{
+                                transition: 0.2s;
+                                transform: translateX(10px);
+                            }
+                        }
+                    }
+                }
+                #contactInputPanel{
+                    width: 69%;
+                    //border: 1px solid $dark-gray;
+                    #contactForm{
+                        width: 100%;
+                        table{
+                            margin-top: 20px;
+                            width: 100%;
+                            tr{
+                                td{
+                                    //border: 1px solid $cool-blue;
+                                    padding-bottom: 10px;
+                                    width: 50%;
+                                    font-size: 19px;
+                                    input{
+                                        width: 99%;
+                                        padding: 3px;
+                                        padding-left: 7px;
+                                    }
+                                    input, textarea{
+                                        border-radius: 20px;
+                                        background-color: $light-gray;
+                                        font-size: 19px;
+                                        font-family: 'Corbert';
+                                        border: 1px solid transparent;
+                                        transition: 0.2s;
+                                    }
+                                    input:focus, textarea:focus{
+                                        outline: 0;
+                                        transition: 0.2s;
+                                        border: 1px solid $dark-gray;
+                                    }
+                                    textarea{
+                                        padding: 5px;
+                                    }
+                                    #inputNameHolder, #inputLastNameHolder, #inputEmailHolder, #inputMobileHolder, #inputMobileHolder2, #inputSubjectHolder, #inputMessageHolder{
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                    }
+                                    #inputMessageHolder{
+                                        #messageInput{
+                                            min-width: 1045px;
+                                            max-width: 1045px;
+                                            min-height: 100px;
+                                        }
+                                    }
+                                    #inputButtonsHolder{
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        #submitButton, #resetButton{
+                                            margin: 10px;
+                                        }
+                                        input{
+                                            width: 20%;
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /*REGISTRATION*/
+        #regFormHolder{
+            font-family: 'Corbert';
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 200px;
+            #registerMain{
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                #loginSection, #registrationSection{
+                    background-color: $light-gray;
+                    width: 40%;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                }
+                #loginSection, #registrationSection{
+                    height: 35vh;
+                    margin-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    #loginForm, #registerForm{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                        #passwordTip{
+                            color: $dark-gray;
+                            font-size: 12px;
+                            margin-top: -5px;
+                            margin-bottom: 10px;
+                        }
+                        #logEmail, #logPassword, #regUsername, #regEmail, #regPassword, #regRepeatPassword, #regDateOfBirth{
+                            width: 60%;
+                            border-radius: 20px;
+                            background-color: #fff;
+                            border: 1px solid $dark-gray;
+                            transition: 0.2s;
+                            padding: 3px 5px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 10px;
+                            i{
+                                font-size: 25px;
+                                padding: 3px;
+                            }
+                            input, select{
+                                width: 100%;
+                                font-family: 'Corbert';
+                                border: none;
+                                font-size: 17px;
+                            }
+                            select{
+                                text-align: center;
+                            }
+                            input:focus{
+                                outline: 0;
+                            }
+                        }
+                        #forgotPass{
+                            a{
+                                color: $dark-gray;
+                            }
+                            margin-bottom: 20px;
+                        }
+                        #logButtons, #regButton{
+                            text-align: center;
+                            #or{
+                                margin-bottom: 3px;
+                            }
+                            input, #jumpReg{
+                                cursor: pointer;
+                                border-radius: 20px;
+                                font-size: 17px;
+                                background-color: #000;
+                                border: 1px solid $dark-gray;
+                                transition: 0.2s;
+                                font-family: 'Corbert';
+                                color: #fff;
+                                padding: 5px 30px;
+                            }
+                            input:hover, #jumpReg:hover{
+                                transition: 0.2s;
+                                background-color: $cool-blue;
+                                transform: translateY(-2px);
+                            }
+                            a{
+                                text-decoration: none;
+                            }
+                            #jumpReg{
+                                font-size: 15px;
+                                padding: 4px 25px;
+                            }
+                        }
+                        #regGender{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            #genderRegInputMale, #genderRegInputFemale{
+                                display: flex;
+                                margin: 20px 40px;
+                                font-size: 19px;
+                                input{
+                                    scale: 1.3;
+                                }
+                                label{
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                        #regTerms{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 30px 0px;
+                            input{
+                                scale: 1.3;
+                            }
+                            label{
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+                #registrationSection{
+                    height: 60vh;
+                }
+            }
+        }
+        /*SHOP*/
+        #shopHolder{
+            font-family: 'Corbert';
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 200px;
+            #shopMain{
+                opacity: 0;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                margin-top: 50px;
+                width: 80%;
+                #shopLeftSB{
+                    width: 24%;
+                    form{
+                        width: 100%;
+                        #filterSearch{
+                            border: 2px solid #d5d5d5a7;
+                            border-radius: 20px;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            i{
+                                cursor: pointer;
+                                transition: 0.2s;
+                                padding: 10px 20px 10px 10px;
+                                font-size: 20px;
+                            }
+                            i:hover{
+                                transition: 0.2s;
+                                color:$cool-blue;
+                            }
+                            input{
+                                width: 100%;
+                                margin-left: 10px;
+                                border: none;
+                                padding: 5px;
+                                background-color: transparent;
+                                font-family: 'Corbert';
+                                font-size: 15px;
+                            }
+                            input:focus{
+                                outline: 0;
+                            }
+                        }
+                        #filterChooseBrand, #filterSale{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            list-style-type: none;
+                            li{
+                                cursor: pointer;
+                                transition: 0.2s;
+                                margin: 5px 0px;
+                                font-size: 17px;
+                            }
+                            li:hover{
+                                transition: 0.2s;
+                                color: $cool-blue;
+                            }
+                        }
+                        #filterPrice{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            padding: 10px;
+                            input{
+                                width: 95%;
+                            }
+                        }
+                        #filterPriceControls{
+                            display: flex;
+                            align-items: baseline;
+                            justify-content: space-evenly;
+                            #minPriceBox, #maxPriceBox{
+                                border: 1px solid #d5d5d5a7;
+                                display: flex;
+                                align-items: baseline;
+                                width: 37%;
+                                p{
+                                    font-size: 18px;
+                                }
+                                input{
+                                    border: none;
+                                    width: 100%;
+                                    text-align: end;
+                                    padding: 7px;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                #shopRightSB{
+                    display: flex;
+                    flex-direction: column;
+                    width: 74%;
+                    #shopSortControls{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        #layoutCtrl, #sortCtrl{
+                            display: flex;
+                            align-items: center;
+                            i{
+                                font-size: 25px;
+                                margin: 0px 5px;
+                            }
+                            p{
+                                font-size: 18px;
+                                margin-left: 20px;
+                            }
+                            form{
+                                label{
+                                    margin-right: 10px;
+                                    font-size: 18px;
+                                }
+                                select{
+                                    font-family: 'Corbert';
+                                    font-size: 15px;
+                                    padding: 7px 10px;
+                                    border-radius: 20px;
+                                    border: 1px solid #d5d5d5d2;
+                                }
+                                select:focus{
+                                    outline: 0;
+                                }
+                            }
+                        }
+                    }
+                    #shopProductsHolder{
+                        width: 100%;
+                        margin-top: 20px;
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        font-family: 'Corbert';
+        background-color: $dark-gray;
+        height: max-content;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #footerHolder{
+            margin-top: 100px;
+            width: 80%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #footerInfo{
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 50px;
+            }
+            #footerSeparator{
+                width: 100%;
+                height: 0.8px;
+                background-color: $light-gray;
+            }
+            #footerEnd{
+                margin: 25px 0px;
+            }
+        }
+    }
+}

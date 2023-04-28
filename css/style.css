@@ -1,0 +1,1364 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Library3AM";
+  src: url("/fonts/Library_3_am.otf");
+}
+@font-face {
+  font-family: "Corbert";
+  src: url("/fonts/Corbert-Regular.ttf");
+}
+/*COLORS*/
+/*EMPTY*/
+.activeLink {
+  color: rgb(0, 94, 255);
+  font-weight: bold;
+}
+
+.mainBlock {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.offerObject {
+  background-color: rgb(114, 255, 255);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whyUsItem {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.whyUsItem .whyUsItem-Icon {
+  transition: 0.3s;
+  font-size: 50px;
+  padding: 5px;
+}
+.whyUsItem .whyUsItem-text {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.whyUsItem .whyUsItem-text h5 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.whyUsItem:hover .whyUsItem-Icon {
+  transition: 0.5s;
+  color: rgb(0, 94, 255);
+  transform: scale(1.05) rotateY(180deg);
+}
+
+.extraMargins {
+  margin: 50px 0px;
+}
+
+.footerInfoBlock {
+  width: 22%;
+  padding: 5px;
+}
+.footerInfoBlock h5 {
+  font-size: 18px;
+  margin: 10px 0px;
+}
+.footerInfoBlock p {
+  font-size: 14px;
+}
+.footerInfoBlock ul {
+  list-style-type: none;
+}
+.footerInfoBlock ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+.footerInfoBlock .footerOptionsList li:hover .listLine {
+  transition: 0.15s;
+  background-color: rgba(0, 55, 255, 0.499);
+  transform: scaleX(1.5);
+  margin-left: 3px;
+}
+.footerInfoBlock .footerOptionsList li:hover p {
+  transition: 0.15s;
+  color: rgba(255, 255, 255, 0.499);
+  transform: translateX(8px);
+}
+.footerInfoBlock .footerOptionsList li:hover i {
+  color: rgba(0, 55, 255, 0.499);
+  transform: scale(1.3);
+}
+.footerInfoBlock .footerOptionsList i {
+  color: #005eff;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.footerInfoBlock #socialBubblesHolder {
+  display: flex;
+  justify-content: flex-start;
+}
+.footerInfoBlock #socialBubblesHolder a {
+  text-decoration: none;
+  color: #fff;
+}
+.footerInfoBlock #socialBubblesHolder a:visited {
+  color: #fff;
+}
+.footerInfoBlock .socialBubble {
+  font-size: 22px;
+  padding: 4px 10px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  margin-right: 7px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.footerInfoBlock .socialBubble:hover {
+  transition: 0.2s;
+}
+.footerInfoBlock .socialBubble:hover i {
+  transition: 0.2s;
+  transform: scale(1.3);
+  color: #fff;
+}
+.footerInfoBlock .facebook:hover {
+  background-color: #4267B2;
+}
+.footerInfoBlock .twitter:hover {
+  background-color: #1DA1F2;
+}
+.footerInfoBlock .telegram:hover {
+  background-color: #0088CC;
+}
+.footerInfoBlock .googlePlus:hover {
+  background-color: #DB4437;
+}
+.footerInfoBlock .linkedIn:hover {
+  background-color: #0A66C2;
+}
+
+.listLine {
+  margin-right: 4px;
+  width: 10px;
+  height: 2px;
+  background-color: #005eff;
+}
+
+.divLine {
+  margin: 10px auto;
+  width: 80%;
+  height: 0.1px;
+  background-color: rgba(0, 0, 0, 0.242);
+}
+
+.quantityControl {
+  transition: 0.2s;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+}
+
+.quantityControl:hover {
+  transition: 0.2s;
+  color: #005eff;
+}
+
+.importantField {
+  color: #f00;
+}
+
+.contactFormButtons {
+  cursor: pointer;
+  background-color: #000 !important;
+  color: #fff;
+}
+
+.contactFormButtons:hover {
+  background-color: #005eff !important;
+}
+
+.contactFormButtons:active {
+  transform: scale(0.95);
+}
+
+.formButtonSuccess {
+  cursor: default !important;
+  background-color: #005eff !important;
+  color: #fff;
+  border: 1px solid #005eff !important;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.formButtonFailure {
+  cursor: default !important;
+  background-color: #f00 !important;
+  color: #000;
+  border: 1px solid #f00 !important;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.filterBlock {
+  width: 100%;
+}
+.filterBlock .filterHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.filterBlock .filterHead .filterHeadUnderline {
+  margin: 5px 0px;
+  width: 15%;
+  height: 2px;
+  background-color: #000;
+}
+.filterBlock .filterBody {
+  width: 100%;
+  margin: 10px 0px;
+}
+.filterBlock .filterBody .filterCheckDevices {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+.filterBlock .filterBody .filterCheckDevices * {
+  cursor: pointer;
+}
+.filterBlock .filterBody .filterCheckDevices label {
+  transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: 10px;
+  font-size: 17px;
+}
+.filterBlock .filterBody .filterCheckDevices:hover label {
+  transition: 0.2s;
+  color: #005eff;
+}
+
+.shopProduct {
+  cursor: pointer;
+  width: 25%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  transition: 0.2s;
+  border: 1px solid transparent;
+}
+.shopProduct .productHead {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+}
+.shopProduct .productHead .productImage {
+  transition: 0.2s;
+  width: 100%;
+}
+.shopProduct .productHead .productHeadDiscounts {
+  position: absolute;
+  top: 5%;
+  left: 0;
+}
+.shopProduct .productHead .productHeadDiscounts .discountName, .shopProduct .productHead .productHeadDiscounts .discountDesc {
+  text-align: left;
+  background-color: #151515;
+  font-size: 11px;
+  color: #fff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 5px 0px;
+}
+.shopProduct .productHead .productHeadControls {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+.shopProduct .productHead .productHeadControls .addToCartHover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  font-size: 35px;
+  padding: 8px;
+  background-color: #fff;
+  transition: 0.2s;
+  border: 1px solid transparent;
+}
+.shopProduct .productHead .productHeadControls .addToCartHover:hover {
+  transition: 0.2s;
+  background-color: #005eff;
+  color: #fff;
+  border: 1px solid #005eff;
+  transform: scale(1.1);
+}
+.shopProduct .productHead:hover .productImage {
+  transition: 0.2s;
+  filter: brightness(0.8) blur(1px);
+}
+.shopProduct .productBody {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.shopProduct .productBody .productName {
+  height: 46px;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px 0px;
+  width: 100%;
+}
+.shopProduct .productBody .productBrand {
+  font-size: 14px;
+  color: rgb(90, 90, 90);
+  font-weight: bold;
+}
+.shopProduct .productBody .productPrices {
+  display: flex;
+}
+.shopProduct .productBody .productPrices .currentPrice {
+  font-size: 19px;
+  margin-right: 15px;
+  font-weight: bold;
+  color: #f00;
+}
+.shopProduct .productBody .productPrices .oldPrice {
+  font-size: 14px;
+  color: rgb(90, 90, 90);
+  text-decoration: line-through;
+}
+.shopProduct .productBody .productRating .ratingColorBlack {
+  color: #000;
+}
+.shopProduct .productBody .productRating .ratingColorGray {
+  color: rgba(125, 125, 125, 0.6549019608);
+}
+
+.shopProduct:hover {
+  transition: 0.2s;
+  background-color: rgba(236, 236, 236, 0.46);
+  border: 1px solid rgb(226, 226, 226);
+  transform: scale(1.05);
+}
+
+.inputHelp, .inputDisclaimer {
+  margin-top: 5px;
+  font-size: 15px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.inputHelp {
+  color: #151515;
+}
+
+.inputDisclaimer {
+  color: #f00;
+}
+
+.inputAlertAnim {
+  transition: 0.3s;
+  transform: scale(1.05) rotateZ(3deg);
+}
+
+.inputError, .registerError {
+  transition: 0.3s;
+  background-color: #ecdbdb !important;
+  border: 1px solid #f00 !important;
+}
+
+.bubbleAnimation {
+  transition: 0.3s;
+  transform: scale(1.3);
+}
+
+.registerError input[type=text], .registerError input[type=email], .registerError input[type=password] {
+  transition: 0.3s;
+  background-color: #ecdbdb !important;
+}
+
+.registerErrorRadio input {
+  transition: 0.3s;
+  color: #f00;
+}
+.registerErrorRadio label {
+  transition: 0.3s;
+  color: #f00;
+}
+
+.registerErrorSelect {
+  transition: 0.3s;
+  background-color: #ecdbdb !important;
+  border: 1px solid #f00 !important;
+}
+.registerErrorSelect select {
+  transition: 0.3s;
+  background-color: #ecdbdb !important;
+  color: #f00;
+}
+
+body header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 25px;
+  font-family: "Corbert";
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+body header #logo {
+  text-decoration: none;
+  color: #000;
+}
+body header #logo h1 {
+  font-family: "Library3AM";
+  font-size: 40px;
+}
+body header nav ul {
+  list-style-type: none;
+  display: flex;
+}
+body header nav ul li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 20px;
+  margin: 0px 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+body header nav ul li a {
+  color: #000;
+  transition: 0.2s;
+  text-decoration: none;
+}
+body header nav ul li:hover {
+  transition: 0.2s;
+  transform: translateY(-3px);
+}
+body header nav ul li:hover a {
+  transition: 0.2s;
+  color: rgb(0, 94, 255);
+}
+body header #navOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header #navOptions div {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+  font-size: 35px;
+}
+body header #navOptions div span {
+  font-size: 18px;
+}
+body header #navOptions a {
+  text-decoration: none;
+  color: #000;
+}
+body header #navOptions #accountOption, body header #navOptions #favoritesOption, body header #navOptions #cartOption {
+  transition: 0.2s;
+  cursor: pointer;
+}
+body header #navOptions #accountOption:hover, body header #navOptions #favoritesOption:hover, body header #navOptions #cartOption:hover {
+  transition: 0.2s;
+  color: rgb(0, 94, 255);
+  transform: translateY(-3px);
+}
+body header #navOptions #cartOption {
+  position: relative;
+}
+body header #navOptions #cartOption #bubbleNum {
+  position: absolute;
+  text-align: center;
+  top: -8px;
+  right: -22px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #f00;
+  font-size: 13px;
+  font-weight: bold;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*INDEX*/
+  /*STANDARD HEADER*/
+  /*ABOUT AUTHOR*/
+  /*CART*/
+  /*CONTACT*/
+  /*REGISTRATION*/
+  /*SHOP*/
+}
+body main #mainBanner {
+  position: relative;
+}
+body main #mainBanner .pictureCarousel {
+  width: 100%;
+}
+body main #mainBanner .pictureCarousel img {
+  width: 100%;
+}
+body main #mainBanner #bannerUI {
+  font-family: "Corbert";
+  width: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+body main #mainBanner #bannerUI #bannerHeading {
+  width: 55%;
+}
+body main #mainBanner #bannerUI #bannerHeading h2 {
+  font-size: 40px;
+}
+body main #mainBanner #bannerUI #bannerControl {
+  margin-top: 20px;
+}
+body main #mainBanner #bannerUI #bannerControl a {
+  text-decoration: none;
+}
+body main #mainBanner #bannerUI #bannerControl #bannerButton {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 30px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+body main #mainBanner #bannerUI #bannerControl #bannerButton:hover {
+  background-color: rgb(0, 94, 255);
+  transform: translateX(5px);
+  transition: 0.2s;
+}
+body main #specialOffers {
+  display: grid;
+  grid-template-columns: 23% 50% 23%;
+  justify-content: space-between;
+}
+body main #specialOffers img {
+  transition: 0.2s;
+  width: 100%;
+}
+body main #newsLetter {
+  font-family: "Corbert";
+}
+body main #newsLetter #newsLetter-back {
+  width: 100%;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-heading h4 {
+  font-size: 33px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-heading h5 {
+  font-size: 27px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-email {
+  width: 100%;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-email form #inputEmail {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 30px;
+  border: 1px solid rgba(128, 128, 128, 0.529);
+  border-radius: 25px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-email form #inputEmail input {
+  width: 90%;
+  font-family: "Corbert";
+  font-size: 18px;
+  border: 0px;
+  background-color: transparent;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-email form #inputEmail input:focus {
+  outline: none;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-email form #inputEmail i {
+  transition: 0.2s;
+  font-size: 28px;
+  cursor: pointer;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-email form #inputEmail i:hover {
+  transition: 0.2s;
+  color: rgb(0, 94, 255);
+}
+body main #newsLetter #newsLetter-back #newsLetter-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+body main #newsLetter #newsLetter-back #newsLetter-right img {
+  width: 70%;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+body main #whyUs {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "Corbert";
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body main #whyUs #whyUsSeparator {
+  margin: 0px 10px;
+  width: 2px;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.3);
+  height: 80px;
+}
+body main #standardHeader {
+  font-family: "Corbert";
+  width: 100%;
+  height: 240px;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+}
+body main #standardHeader #standardHeaderLeft {
+  opacity: 0;
+  width: 50%;
+  padding: 70px 150px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+body main #standardHeader #standardHeaderLeft h2 {
+  font-size: 30px;
+  margin: 10px 0px;
+}
+body main #standardHeader #standardHeaderLeft span {
+  transition: 0.2s;
+  color: #151515;
+  cursor: pointer;
+}
+body main #standardHeader #standardHeaderLeft span:hover {
+  transition: 0.2s;
+  color: #005eff;
+}
+body main #standardHeader #standardHeaderRight {
+  opacity: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url("../images/compressed2.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main #aboutAuthorHolder {
+  font-family: "Corbert";
+  display: flex;
+  flex-direction: column;
+}
+body main #aboutAuthorHolder #authorMain {
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main #aboutAuthorHolder #authorMain #authorMainText, body main #aboutAuthorHolder #authorMain #authorMainPortrait {
+  width: 49%;
+}
+body main #aboutAuthorHolder #authorMain #authorMainText {
+  text-align: center;
+  font-size: 20px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+body main #aboutAuthorHolder #authorMain #authorMainText p {
+  margin-bottom: 20px;
+}
+body main #aboutAuthorHolder #authorMain #authorMainText a {
+  color: #005eff;
+  text-decoration: none;
+}
+body main #aboutAuthorHolder #authorMain #authorMainText hr {
+  margin-bottom: 60px;
+}
+body main #aboutAuthorHolder #authorMain #authorMainText #documentationButton {
+  margin: 0px auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 15px 70px;
+  border-radius: 15px;
+  font-size: 18px;
+  border: 1px solid rgb(182, 182, 182);
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  transition: 0.2s;
+}
+body main #aboutAuthorHolder #authorMain #authorMainText #documentationButton:hover {
+  transition: 0.2s;
+  transform: scale(1.03);
+  border: 1px solid #005eff;
+  background-color: #005eff;
+  color: #fff;
+}
+body main #aboutAuthorHolder #authorMain #authorMainPortrait {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #aboutAuthorHolder #authorMain #authorMainPortrait img {
+  height: 700px;
+  box-shadow: rgba(0, 94, 255, 0.4) 5px 5px, rgba(0, 94, 255, 0.3) 10px 10px, rgba(0, 94, 255, 0.2) 15px 15px, rgba(0, 94, 255, 0.1) 20px 20px, rgba(0, 94, 255, 0.05) 25px 25px;
+}
+body main #cartHolder {
+  font-family: "Corbert";
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+body main #cartHolder #cartMain {
+  opacity: 0;
+  display: flex;
+  min-height: 40vh;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body main #cartHolder #cartMain #cartTableHolder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 69%;
+}
+body main #cartHolder #cartMain #cartTableHolder #emptyCartMessage {
+  padding: 40px;
+  margin-top: 100px;
+  width: 50%;
+  text-align: center;
+  background-color: #ededed;
+  border: 2px solid #adadad;
+}
+body main #cartHolder #cartMain #cartTableHolder #emptyCartMessage span {
+  font-weight: bold;
+}
+body main #cartHolder #cartMain #cartTableHolder table {
+  border-collapse: collapse;
+  width: 100%;
+}
+body main #cartHolder #cartMain #cartTableHolder table th {
+  text-align: center;
+}
+body main #cartHolder #cartMain #cartTableHolder table tr td {
+  text-align: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid #ededed;
+}
+body main #cartHolder #cartMain #cartTableHolder table tr td img {
+  height: 100px;
+}
+body main #cartHolder #cartMain #cartTableHolder table tr td:nth-child(1) {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+body main #cartHolder #cartMain #cartTableHolder table tr td:nth-child(3) {
+  text-align: start;
+}
+body main #cartHolder #cartMain #cartTableHolder table tr td:nth-last-child(1) {
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 26px;
+  color: red;
+}
+body main #cartHolder #cartMain #cartTableHolder table tr td:nth-last-child(1):hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+  color: rgb(0, 0, 0);
+}
+body main #cartHolder #cartMain #cartTableHolder table tr:hover {
+  background-color: rgba(244, 244, 244, 0.7);
+}
+body main #cartHolder #cartMain #cartPanel {
+  width: 29%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+}
+body main #cartHolder #cartMain #cartPanel #discountCodeSection {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #cartHolder #cartMain #cartPanel #discountCodeSection #discountForm {
+  display: flex;
+}
+body main #cartHolder #cartMain #cartPanel #discountCodeSection #discountForm #discountInput {
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  padding-right: 30px;
+  border: 1px solid #fff;
+  transition: all 0.2s ease-out;
+}
+body main #cartHolder #cartMain #cartPanel #discountCodeSection #discountForm #discountInput:focus {
+  outline: 0;
+  transition: 0.2s;
+  border: 1px solid #151515;
+}
+body main #cartHolder #cartMain #cartPanel #discountCodeSection #discountForm #applyDiscountButton {
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #151515;
+  border: 1px solid #151515;
+  color: #fff;
+  padding: 0px 10px;
+  border-radius: 20px;
+  margin-left: -45px;
+}
+body main #cartHolder #cartMain #cartPanel #discountCodeSection #discountForm #applyDiscountButton:hover {
+  transition: 0.2s;
+  background-color: #005eff;
+  border: 1px solid #005eff;
+}
+body main #cartHolder #cartMain #cartPanel #totalSection {
+  width: 80%;
+  margin: 0px auto;
+}
+body main #cartHolder #cartMain #cartPanel #orderSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body main #cartHolder #cartMain #cartPanel #orderSection #checkoutFormButton {
+  transition: 0.2s;
+  cursor: default;
+  display: flex;
+  align-items: baseline;
+  border: 1px solid rgb(119, 119, 119);
+  border-radius: 30px;
+  color: #fff;
+  padding: 10px 40px;
+  background-color: rgb(158, 158, 158);
+  margin: 10px 0px;
+}
+body main #cartHolder #cartMain #cartPanel #orderSection #loginTip {
+  color: rgb(81, 81, 81);
+}
+body main #cartHolder #cartMain #cartPanel #orderSection #loginTip:hover {
+  color: rgb(116, 116, 116);
+}
+body main #contactHolder {
+  font-family: "Corbert";
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+body main #contactHolder #contactMain {
+  opacity: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+body main #contactHolder #contactMain #contactSidePanel {
+  width: 29%;
+  height: 400px;
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body main #contactHolder #contactMain #contactSidePanel #phoneSection, body main #contactHolder #contactMain #contactSidePanel #addressSection, body main #contactHolder #contactMain #contactSidePanel #webSection {
+  width: 80%;
+  margin: 0px auto;
+}
+body main #contactHolder #contactMain #contactSidePanel #phoneSection #phoneNumber, body main #contactHolder #contactMain #contactSidePanel #phoneSection #faxNumber {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px 0px;
+  transition: 0.2s;
+}
+body main #contactHolder #contactMain #contactSidePanel #phoneSection #phoneNumber i, body main #contactHolder #contactMain #contactSidePanel #phoneSection #faxNumber i {
+  font-size: 25px;
+}
+body main #contactHolder #contactMain #contactSidePanel #phoneSection #phoneNumber:hover i, body main #contactHolder #contactMain #contactSidePanel #phoneSection #faxNumber:hover i {
+  transition: 0.2s;
+  color: #005eff;
+}
+body main #contactHolder #contactMain #contactSidePanel #phoneSection #phoneNumber:hover p, body main #contactHolder #contactMain #contactSidePanel #phoneSection #faxNumber:hover p {
+  transition: 0.2s;
+  transform: translateX(10px);
+}
+body main #contactHolder #contactMain #contactSidePanel #addressSection #locationAddress {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px 0px;
+  transition: 0.2s;
+}
+body main #contactHolder #contactMain #contactSidePanel #addressSection #locationAddress i {
+  font-size: 25px;
+}
+body main #contactHolder #contactMain #contactSidePanel #addressSection #locationAddress:hover i {
+  transition: 0.2s;
+  color: #005eff;
+}
+body main #contactHolder #contactMain #contactSidePanel #addressSection #locationAddress:hover p {
+  transition: 0.2s;
+  transform: translateX(10px);
+}
+body main #contactHolder #contactMain #contactSidePanel #webSection #emailAddress, body main #contactHolder #contactMain #contactSidePanel #webSection #webAddress {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px 0px;
+  transition: 0.2s;
+}
+body main #contactHolder #contactMain #contactSidePanel #webSection #emailAddress i, body main #contactHolder #contactMain #contactSidePanel #webSection #webAddress i {
+  font-size: 25px;
+}
+body main #contactHolder #contactMain #contactSidePanel #webSection #emailAddress:hover i, body main #contactHolder #contactMain #contactSidePanel #webSection #webAddress:hover i {
+  transition: 0.2s;
+  color: #005eff;
+}
+body main #contactHolder #contactMain #contactSidePanel #webSection #emailAddress:hover p, body main #contactHolder #contactMain #contactSidePanel #webSection #webAddress:hover p {
+  transition: 0.2s;
+  transform: translateX(10px);
+}
+body main #contactHolder #contactMain #contactInputPanel {
+  width: 69%;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm {
+  width: 100%;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table {
+  margin-top: 20px;
+  width: 100%;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td {
+  padding-bottom: 10px;
+  width: 50%;
+  font-size: 19px;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td input {
+  width: 99%;
+  padding: 3px;
+  padding-left: 7px;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td input, body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td textarea {
+  border-radius: 20px;
+  background-color: #ededed;
+  font-size: 19px;
+  font-family: "Corbert";
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td input:focus, body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td textarea:focus {
+  outline: 0;
+  transition: 0.2s;
+  border: 1px solid #151515;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td textarea {
+  padding: 5px;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputNameHolder, body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputLastNameHolder, body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputEmailHolder, body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputMobileHolder, body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputMobileHolder2, body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputSubjectHolder, body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputMessageHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputMessageHolder #messageInput {
+  min-width: 1045px;
+  max-width: 1045px;
+  min-height: 100px;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputButtonsHolder {
+  display: flex;
+  justify-content: flex-end;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputButtonsHolder #submitButton, body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputButtonsHolder #resetButton {
+  margin: 10px;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tr td #inputButtonsHolder input {
+  width: 20%;
+  font-size: 18px;
+}
+body main #regFormHolder {
+  font-family: "Corbert";
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+body main #regFormHolder #registerMain {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main #regFormHolder #registerMain #loginSection, body main #regFormHolder #registerMain #registrationSection {
+  background-color: #ededed;
+  width: 40%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+body main #regFormHolder #registerMain #loginSection, body main #regFormHolder #registerMain #registrationSection {
+  height: 35vh;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm, body main #regFormHolder #registerMain #loginSection #registerForm, body main #regFormHolder #registerMain #registrationSection #loginForm, body main #regFormHolder #registerMain #registrationSection #registerForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #passwordTip, body main #regFormHolder #registerMain #loginSection #registerForm #passwordTip, body main #regFormHolder #registerMain #registrationSection #loginForm #passwordTip, body main #regFormHolder #registerMain #registrationSection #registerForm #passwordTip {
+  color: #151515;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logEmail, body main #regFormHolder #registerMain #loginSection #loginForm #logPassword, body main #regFormHolder #registerMain #loginSection #loginForm #regUsername, body main #regFormHolder #registerMain #loginSection #loginForm #regEmail, body main #regFormHolder #registerMain #loginSection #loginForm #regPassword, body main #regFormHolder #registerMain #loginSection #loginForm #regRepeatPassword, body main #regFormHolder #registerMain #loginSection #loginForm #regDateOfBirth, body main #regFormHolder #registerMain #loginSection #registerForm #logEmail, body main #regFormHolder #registerMain #loginSection #registerForm #logPassword, body main #regFormHolder #registerMain #loginSection #registerForm #regUsername, body main #regFormHolder #registerMain #loginSection #registerForm #regEmail, body main #regFormHolder #registerMain #loginSection #registerForm #regPassword, body main #regFormHolder #registerMain #loginSection #registerForm #regRepeatPassword, body main #regFormHolder #registerMain #loginSection #registerForm #regDateOfBirth, body main #regFormHolder #registerMain #registrationSection #loginForm #logEmail, body main #regFormHolder #registerMain #registrationSection #loginForm #logPassword, body main #regFormHolder #registerMain #registrationSection #loginForm #regUsername, body main #regFormHolder #registerMain #registrationSection #loginForm #regEmail, body main #regFormHolder #registerMain #registrationSection #loginForm #regPassword, body main #regFormHolder #registerMain #registrationSection #loginForm #regRepeatPassword, body main #regFormHolder #registerMain #registrationSection #loginForm #regDateOfBirth, body main #regFormHolder #registerMain #registrationSection #registerForm #logEmail, body main #regFormHolder #registerMain #registrationSection #registerForm #logPassword, body main #regFormHolder #registerMain #registrationSection #registerForm #regUsername, body main #regFormHolder #registerMain #registrationSection #registerForm #regEmail, body main #regFormHolder #registerMain #registrationSection #registerForm #regPassword, body main #regFormHolder #registerMain #registrationSection #registerForm #regRepeatPassword, body main #regFormHolder #registerMain #registrationSection #registerForm #regDateOfBirth {
+  width: 60%;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #151515;
+  transition: 0.2s;
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logEmail i, body main #regFormHolder #registerMain #loginSection #loginForm #logPassword i, body main #regFormHolder #registerMain #loginSection #loginForm #regUsername i, body main #regFormHolder #registerMain #loginSection #loginForm #regEmail i, body main #regFormHolder #registerMain #loginSection #loginForm #regPassword i, body main #regFormHolder #registerMain #loginSection #loginForm #regRepeatPassword i, body main #regFormHolder #registerMain #loginSection #loginForm #regDateOfBirth i, body main #regFormHolder #registerMain #loginSection #registerForm #logEmail i, body main #regFormHolder #registerMain #loginSection #registerForm #logPassword i, body main #regFormHolder #registerMain #loginSection #registerForm #regUsername i, body main #regFormHolder #registerMain #loginSection #registerForm #regEmail i, body main #regFormHolder #registerMain #loginSection #registerForm #regPassword i, body main #regFormHolder #registerMain #loginSection #registerForm #regRepeatPassword i, body main #regFormHolder #registerMain #loginSection #registerForm #regDateOfBirth i, body main #regFormHolder #registerMain #registrationSection #loginForm #logEmail i, body main #regFormHolder #registerMain #registrationSection #loginForm #logPassword i, body main #regFormHolder #registerMain #registrationSection #loginForm #regUsername i, body main #regFormHolder #registerMain #registrationSection #loginForm #regEmail i, body main #regFormHolder #registerMain #registrationSection #loginForm #regPassword i, body main #regFormHolder #registerMain #registrationSection #loginForm #regRepeatPassword i, body main #regFormHolder #registerMain #registrationSection #loginForm #regDateOfBirth i, body main #regFormHolder #registerMain #registrationSection #registerForm #logEmail i, body main #regFormHolder #registerMain #registrationSection #registerForm #logPassword i, body main #regFormHolder #registerMain #registrationSection #registerForm #regUsername i, body main #regFormHolder #registerMain #registrationSection #registerForm #regEmail i, body main #regFormHolder #registerMain #registrationSection #registerForm #regPassword i, body main #regFormHolder #registerMain #registrationSection #registerForm #regRepeatPassword i, body main #regFormHolder #registerMain #registrationSection #registerForm #regDateOfBirth i {
+  font-size: 25px;
+  padding: 3px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logEmail input, body main #regFormHolder #registerMain #loginSection #loginForm #logEmail select, body main #regFormHolder #registerMain #loginSection #loginForm #logPassword input, body main #regFormHolder #registerMain #loginSection #loginForm #logPassword select, body main #regFormHolder #registerMain #loginSection #loginForm #regUsername input, body main #regFormHolder #registerMain #loginSection #loginForm #regUsername select, body main #regFormHolder #registerMain #loginSection #loginForm #regEmail input, body main #regFormHolder #registerMain #loginSection #loginForm #regEmail select, body main #regFormHolder #registerMain #loginSection #loginForm #regPassword input, body main #regFormHolder #registerMain #loginSection #loginForm #regPassword select, body main #regFormHolder #registerMain #loginSection #loginForm #regRepeatPassword input, body main #regFormHolder #registerMain #loginSection #loginForm #regRepeatPassword select, body main #regFormHolder #registerMain #loginSection #loginForm #regDateOfBirth input, body main #regFormHolder #registerMain #loginSection #loginForm #regDateOfBirth select, body main #regFormHolder #registerMain #loginSection #registerForm #logEmail input, body main #regFormHolder #registerMain #loginSection #registerForm #logEmail select, body main #regFormHolder #registerMain #loginSection #registerForm #logPassword input, body main #regFormHolder #registerMain #loginSection #registerForm #logPassword select, body main #regFormHolder #registerMain #loginSection #registerForm #regUsername input, body main #regFormHolder #registerMain #loginSection #registerForm #regUsername select, body main #regFormHolder #registerMain #loginSection #registerForm #regEmail input, body main #regFormHolder #registerMain #loginSection #registerForm #regEmail select, body main #regFormHolder #registerMain #loginSection #registerForm #regPassword input, body main #regFormHolder #registerMain #loginSection #registerForm #regPassword select, body main #regFormHolder #registerMain #loginSection #registerForm #regRepeatPassword input, body main #regFormHolder #registerMain #loginSection #registerForm #regRepeatPassword select, body main #regFormHolder #registerMain #loginSection #registerForm #regDateOfBirth input, body main #regFormHolder #registerMain #loginSection #registerForm #regDateOfBirth select, body main #regFormHolder #registerMain #registrationSection #loginForm #logEmail input, body main #regFormHolder #registerMain #registrationSection #loginForm #logEmail select, body main #regFormHolder #registerMain #registrationSection #loginForm #logPassword input, body main #regFormHolder #registerMain #registrationSection #loginForm #logPassword select, body main #regFormHolder #registerMain #registrationSection #loginForm #regUsername input, body main #regFormHolder #registerMain #registrationSection #loginForm #regUsername select, body main #regFormHolder #registerMain #registrationSection #loginForm #regEmail input, body main #regFormHolder #registerMain #registrationSection #loginForm #regEmail select, body main #regFormHolder #registerMain #registrationSection #loginForm #regPassword input, body main #regFormHolder #registerMain #registrationSection #loginForm #regPassword select, body main #regFormHolder #registerMain #registrationSection #loginForm #regRepeatPassword input, body main #regFormHolder #registerMain #registrationSection #loginForm #regRepeatPassword select, body main #regFormHolder #registerMain #registrationSection #loginForm #regDateOfBirth input, body main #regFormHolder #registerMain #registrationSection #loginForm #regDateOfBirth select, body main #regFormHolder #registerMain #registrationSection #registerForm #logEmail input, body main #regFormHolder #registerMain #registrationSection #registerForm #logEmail select, body main #regFormHolder #registerMain #registrationSection #registerForm #logPassword input, body main #regFormHolder #registerMain #registrationSection #registerForm #logPassword select, body main #regFormHolder #registerMain #registrationSection #registerForm #regUsername input, body main #regFormHolder #registerMain #registrationSection #registerForm #regUsername select, body main #regFormHolder #registerMain #registrationSection #registerForm #regEmail input, body main #regFormHolder #registerMain #registrationSection #registerForm #regEmail select, body main #regFormHolder #registerMain #registrationSection #registerForm #regPassword input, body main #regFormHolder #registerMain #registrationSection #registerForm #regPassword select, body main #regFormHolder #registerMain #registrationSection #registerForm #regRepeatPassword input, body main #regFormHolder #registerMain #registrationSection #registerForm #regRepeatPassword select, body main #regFormHolder #registerMain #registrationSection #registerForm #regDateOfBirth input, body main #regFormHolder #registerMain #registrationSection #registerForm #regDateOfBirth select {
+  width: 100%;
+  font-family: "Corbert";
+  border: none;
+  font-size: 17px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logEmail select, body main #regFormHolder #registerMain #loginSection #loginForm #logPassword select, body main #regFormHolder #registerMain #loginSection #loginForm #regUsername select, body main #regFormHolder #registerMain #loginSection #loginForm #regEmail select, body main #regFormHolder #registerMain #loginSection #loginForm #regPassword select, body main #regFormHolder #registerMain #loginSection #loginForm #regRepeatPassword select, body main #regFormHolder #registerMain #loginSection #loginForm #regDateOfBirth select, body main #regFormHolder #registerMain #loginSection #registerForm #logEmail select, body main #regFormHolder #registerMain #loginSection #registerForm #logPassword select, body main #regFormHolder #registerMain #loginSection #registerForm #regUsername select, body main #regFormHolder #registerMain #loginSection #registerForm #regEmail select, body main #regFormHolder #registerMain #loginSection #registerForm #regPassword select, body main #regFormHolder #registerMain #loginSection #registerForm #regRepeatPassword select, body main #regFormHolder #registerMain #loginSection #registerForm #regDateOfBirth select, body main #regFormHolder #registerMain #registrationSection #loginForm #logEmail select, body main #regFormHolder #registerMain #registrationSection #loginForm #logPassword select, body main #regFormHolder #registerMain #registrationSection #loginForm #regUsername select, body main #regFormHolder #registerMain #registrationSection #loginForm #regEmail select, body main #regFormHolder #registerMain #registrationSection #loginForm #regPassword select, body main #regFormHolder #registerMain #registrationSection #loginForm #regRepeatPassword select, body main #regFormHolder #registerMain #registrationSection #loginForm #regDateOfBirth select, body main #regFormHolder #registerMain #registrationSection #registerForm #logEmail select, body main #regFormHolder #registerMain #registrationSection #registerForm #logPassword select, body main #regFormHolder #registerMain #registrationSection #registerForm #regUsername select, body main #regFormHolder #registerMain #registrationSection #registerForm #regEmail select, body main #regFormHolder #registerMain #registrationSection #registerForm #regPassword select, body main #regFormHolder #registerMain #registrationSection #registerForm #regRepeatPassword select, body main #regFormHolder #registerMain #registrationSection #registerForm #regDateOfBirth select {
+  text-align: center;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logEmail input:focus, body main #regFormHolder #registerMain #loginSection #loginForm #logPassword input:focus, body main #regFormHolder #registerMain #loginSection #loginForm #regUsername input:focus, body main #regFormHolder #registerMain #loginSection #loginForm #regEmail input:focus, body main #regFormHolder #registerMain #loginSection #loginForm #regPassword input:focus, body main #regFormHolder #registerMain #loginSection #loginForm #regRepeatPassword input:focus, body main #regFormHolder #registerMain #loginSection #loginForm #regDateOfBirth input:focus, body main #regFormHolder #registerMain #loginSection #registerForm #logEmail input:focus, body main #regFormHolder #registerMain #loginSection #registerForm #logPassword input:focus, body main #regFormHolder #registerMain #loginSection #registerForm #regUsername input:focus, body main #regFormHolder #registerMain #loginSection #registerForm #regEmail input:focus, body main #regFormHolder #registerMain #loginSection #registerForm #regPassword input:focus, body main #regFormHolder #registerMain #loginSection #registerForm #regRepeatPassword input:focus, body main #regFormHolder #registerMain #loginSection #registerForm #regDateOfBirth input:focus, body main #regFormHolder #registerMain #registrationSection #loginForm #logEmail input:focus, body main #regFormHolder #registerMain #registrationSection #loginForm #logPassword input:focus, body main #regFormHolder #registerMain #registrationSection #loginForm #regUsername input:focus, body main #regFormHolder #registerMain #registrationSection #loginForm #regEmail input:focus, body main #regFormHolder #registerMain #registrationSection #loginForm #regPassword input:focus, body main #regFormHolder #registerMain #registrationSection #loginForm #regRepeatPassword input:focus, body main #regFormHolder #registerMain #registrationSection #loginForm #regDateOfBirth input:focus, body main #regFormHolder #registerMain #registrationSection #registerForm #logEmail input:focus, body main #regFormHolder #registerMain #registrationSection #registerForm #logPassword input:focus, body main #regFormHolder #registerMain #registrationSection #registerForm #regUsername input:focus, body main #regFormHolder #registerMain #registrationSection #registerForm #regEmail input:focus, body main #regFormHolder #registerMain #registrationSection #registerForm #regPassword input:focus, body main #regFormHolder #registerMain #registrationSection #registerForm #regRepeatPassword input:focus, body main #regFormHolder #registerMain #registrationSection #registerForm #regDateOfBirth input:focus {
+  outline: 0;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #forgotPass, body main #regFormHolder #registerMain #loginSection #registerForm #forgotPass, body main #regFormHolder #registerMain #registrationSection #loginForm #forgotPass, body main #regFormHolder #registerMain #registrationSection #registerForm #forgotPass {
+  margin-bottom: 20px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #forgotPass a, body main #regFormHolder #registerMain #loginSection #registerForm #forgotPass a, body main #regFormHolder #registerMain #registrationSection #loginForm #forgotPass a, body main #regFormHolder #registerMain #registrationSection #registerForm #forgotPass a {
+  color: #151515;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logButtons, body main #regFormHolder #registerMain #loginSection #loginForm #regButton, body main #regFormHolder #registerMain #loginSection #registerForm #logButtons, body main #regFormHolder #registerMain #loginSection #registerForm #regButton, body main #regFormHolder #registerMain #registrationSection #loginForm #logButtons, body main #regFormHolder #registerMain #registrationSection #loginForm #regButton, body main #regFormHolder #registerMain #registrationSection #registerForm #logButtons, body main #regFormHolder #registerMain #registrationSection #registerForm #regButton {
+  text-align: center;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logButtons #or, body main #regFormHolder #registerMain #loginSection #loginForm #regButton #or, body main #regFormHolder #registerMain #loginSection #registerForm #logButtons #or, body main #regFormHolder #registerMain #loginSection #registerForm #regButton #or, body main #regFormHolder #registerMain #registrationSection #loginForm #logButtons #or, body main #regFormHolder #registerMain #registrationSection #loginForm #regButton #or, body main #regFormHolder #registerMain #registrationSection #registerForm #logButtons #or, body main #regFormHolder #registerMain #registrationSection #registerForm #regButton #or {
+  margin-bottom: 3px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logButtons input, body main #regFormHolder #registerMain #loginSection #loginForm #logButtons #jumpReg, body main #regFormHolder #registerMain #loginSection #loginForm #regButton input, body main #regFormHolder #registerMain #loginSection #loginForm #regButton #jumpReg, body main #regFormHolder #registerMain #loginSection #registerForm #logButtons input, body main #regFormHolder #registerMain #loginSection #registerForm #logButtons #jumpReg, body main #regFormHolder #registerMain #loginSection #registerForm #regButton input, body main #regFormHolder #registerMain #loginSection #registerForm #regButton #jumpReg, body main #regFormHolder #registerMain #registrationSection #loginForm #logButtons input, body main #regFormHolder #registerMain #registrationSection #loginForm #logButtons #jumpReg, body main #regFormHolder #registerMain #registrationSection #loginForm #regButton input, body main #regFormHolder #registerMain #registrationSection #loginForm #regButton #jumpReg, body main #regFormHolder #registerMain #registrationSection #registerForm #logButtons input, body main #regFormHolder #registerMain #registrationSection #registerForm #logButtons #jumpReg, body main #regFormHolder #registerMain #registrationSection #registerForm #regButton input, body main #regFormHolder #registerMain #registrationSection #registerForm #regButton #jumpReg {
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 17px;
+  background-color: #000;
+  border: 1px solid #151515;
+  transition: 0.2s;
+  font-family: "Corbert";
+  color: #fff;
+  padding: 5px 30px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logButtons input:hover, body main #regFormHolder #registerMain #loginSection #loginForm #logButtons #jumpReg:hover, body main #regFormHolder #registerMain #loginSection #loginForm #regButton input:hover, body main #regFormHolder #registerMain #loginSection #loginForm #regButton #jumpReg:hover, body main #regFormHolder #registerMain #loginSection #registerForm #logButtons input:hover, body main #regFormHolder #registerMain #loginSection #registerForm #logButtons #jumpReg:hover, body main #regFormHolder #registerMain #loginSection #registerForm #regButton input:hover, body main #regFormHolder #registerMain #loginSection #registerForm #regButton #jumpReg:hover, body main #regFormHolder #registerMain #registrationSection #loginForm #logButtons input:hover, body main #regFormHolder #registerMain #registrationSection #loginForm #logButtons #jumpReg:hover, body main #regFormHolder #registerMain #registrationSection #loginForm #regButton input:hover, body main #regFormHolder #registerMain #registrationSection #loginForm #regButton #jumpReg:hover, body main #regFormHolder #registerMain #registrationSection #registerForm #logButtons input:hover, body main #regFormHolder #registerMain #registrationSection #registerForm #logButtons #jumpReg:hover, body main #regFormHolder #registerMain #registrationSection #registerForm #regButton input:hover, body main #regFormHolder #registerMain #registrationSection #registerForm #regButton #jumpReg:hover {
+  transition: 0.2s;
+  background-color: #005eff;
+  transform: translateY(-2px);
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logButtons a, body main #regFormHolder #registerMain #loginSection #loginForm #regButton a, body main #regFormHolder #registerMain #loginSection #registerForm #logButtons a, body main #regFormHolder #registerMain #loginSection #registerForm #regButton a, body main #regFormHolder #registerMain #registrationSection #loginForm #logButtons a, body main #regFormHolder #registerMain #registrationSection #loginForm #regButton a, body main #regFormHolder #registerMain #registrationSection #registerForm #logButtons a, body main #regFormHolder #registerMain #registrationSection #registerForm #regButton a {
+  text-decoration: none;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #logButtons #jumpReg, body main #regFormHolder #registerMain #loginSection #loginForm #regButton #jumpReg, body main #regFormHolder #registerMain #loginSection #registerForm #logButtons #jumpReg, body main #regFormHolder #registerMain #loginSection #registerForm #regButton #jumpReg, body main #regFormHolder #registerMain #registrationSection #loginForm #logButtons #jumpReg, body main #regFormHolder #registerMain #registrationSection #loginForm #regButton #jumpReg, body main #regFormHolder #registerMain #registrationSection #registerForm #logButtons #jumpReg, body main #regFormHolder #registerMain #registrationSection #registerForm #regButton #jumpReg {
+  font-size: 15px;
+  padding: 4px 25px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #regGender, body main #regFormHolder #registerMain #loginSection #registerForm #regGender, body main #regFormHolder #registerMain #registrationSection #loginForm #regGender, body main #regFormHolder #registerMain #registrationSection #registerForm #regGender {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #regGender #genderRegInputMale, body main #regFormHolder #registerMain #loginSection #loginForm #regGender #genderRegInputFemale, body main #regFormHolder #registerMain #loginSection #registerForm #regGender #genderRegInputMale, body main #regFormHolder #registerMain #loginSection #registerForm #regGender #genderRegInputFemale, body main #regFormHolder #registerMain #registrationSection #loginForm #regGender #genderRegInputMale, body main #regFormHolder #registerMain #registrationSection #loginForm #regGender #genderRegInputFemale, body main #regFormHolder #registerMain #registrationSection #registerForm #regGender #genderRegInputMale, body main #regFormHolder #registerMain #registrationSection #registerForm #regGender #genderRegInputFemale {
+  display: flex;
+  margin: 20px 40px;
+  font-size: 19px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #regGender #genderRegInputMale input, body main #regFormHolder #registerMain #loginSection #loginForm #regGender #genderRegInputFemale input, body main #regFormHolder #registerMain #loginSection #registerForm #regGender #genderRegInputMale input, body main #regFormHolder #registerMain #loginSection #registerForm #regGender #genderRegInputFemale input, body main #regFormHolder #registerMain #registrationSection #loginForm #regGender #genderRegInputMale input, body main #regFormHolder #registerMain #registrationSection #loginForm #regGender #genderRegInputFemale input, body main #regFormHolder #registerMain #registrationSection #registerForm #regGender #genderRegInputMale input, body main #regFormHolder #registerMain #registrationSection #registerForm #regGender #genderRegInputFemale input {
+  scale: 1.3;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #regGender #genderRegInputMale label, body main #regFormHolder #registerMain #loginSection #loginForm #regGender #genderRegInputFemale label, body main #regFormHolder #registerMain #loginSection #registerForm #regGender #genderRegInputMale label, body main #regFormHolder #registerMain #loginSection #registerForm #regGender #genderRegInputFemale label, body main #regFormHolder #registerMain #registrationSection #loginForm #regGender #genderRegInputMale label, body main #regFormHolder #registerMain #registrationSection #loginForm #regGender #genderRegInputFemale label, body main #regFormHolder #registerMain #registrationSection #registerForm #regGender #genderRegInputMale label, body main #regFormHolder #registerMain #registrationSection #registerForm #regGender #genderRegInputFemale label {
+  margin-left: 10px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #regTerms, body main #regFormHolder #registerMain #loginSection #registerForm #regTerms, body main #regFormHolder #registerMain #registrationSection #loginForm #regTerms, body main #regFormHolder #registerMain #registrationSection #registerForm #regTerms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0px;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #regTerms input, body main #regFormHolder #registerMain #loginSection #registerForm #regTerms input, body main #regFormHolder #registerMain #registrationSection #loginForm #regTerms input, body main #regFormHolder #registerMain #registrationSection #registerForm #regTerms input {
+  scale: 1.3;
+}
+body main #regFormHolder #registerMain #loginSection #loginForm #regTerms label, body main #regFormHolder #registerMain #loginSection #registerForm #regTerms label, body main #regFormHolder #registerMain #registrationSection #loginForm #regTerms label, body main #regFormHolder #registerMain #registrationSection #registerForm #regTerms label {
+  margin-left: 10px;
+}
+body main #regFormHolder #registerMain #registrationSection {
+  height: 60vh;
+}
+body main #shopHolder {
+  font-family: "Corbert";
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+body main #shopHolder #shopMain {
+  opacity: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 80%;
+}
+body main #shopHolder #shopMain #shopLeftSB {
+  width: 24%;
+}
+body main #shopHolder #shopMain #shopLeftSB form {
+  width: 100%;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterSearch {
+  border: 2px solid rgba(213, 213, 213, 0.6549019608);
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterSearch i {
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 10px 20px 10px 10px;
+  font-size: 20px;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterSearch i:hover {
+  transition: 0.2s;
+  color: #005eff;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterSearch input {
+  width: 100%;
+  margin-left: 10px;
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+  font-family: "Corbert";
+  font-size: 15px;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterSearch input:focus {
+  outline: 0;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterChooseBrand, body main #shopHolder #shopMain #shopLeftSB form #filterSale {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterChooseBrand li, body main #shopHolder #shopMain #shopLeftSB form #filterSale li {
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 5px 0px;
+  font-size: 17px;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterChooseBrand li:hover, body main #shopHolder #shopMain #shopLeftSB form #filterSale li:hover {
+  transition: 0.2s;
+  color: #005eff;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterPrice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterPrice input {
+  width: 95%;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterPriceControls {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterPriceControls #minPriceBox, body main #shopHolder #shopMain #shopLeftSB form #filterPriceControls #maxPriceBox {
+  border: 1px solid rgba(213, 213, 213, 0.6549019608);
+  display: flex;
+  align-items: baseline;
+  width: 37%;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterPriceControls #minPriceBox p, body main #shopHolder #shopMain #shopLeftSB form #filterPriceControls #maxPriceBox p {
+  font-size: 18px;
+}
+body main #shopHolder #shopMain #shopLeftSB form #filterPriceControls #minPriceBox input, body main #shopHolder #shopMain #shopLeftSB form #filterPriceControls #maxPriceBox input {
+  border: none;
+  width: 100%;
+  text-align: end;
+  padding: 7px;
+  font-size: 15px;
+}
+body main #shopHolder #shopMain #shopRightSB {
+  display: flex;
+  flex-direction: column;
+  width: 74%;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #layoutCtrl, body main #shopHolder #shopMain #shopRightSB #shopSortControls #sortCtrl {
+  display: flex;
+  align-items: center;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #layoutCtrl i, body main #shopHolder #shopMain #shopRightSB #shopSortControls #sortCtrl i {
+  font-size: 25px;
+  margin: 0px 5px;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #layoutCtrl p, body main #shopHolder #shopMain #shopRightSB #shopSortControls #sortCtrl p {
+  font-size: 18px;
+  margin-left: 20px;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #layoutCtrl form label, body main #shopHolder #shopMain #shopRightSB #shopSortControls #sortCtrl form label {
+  margin-right: 10px;
+  font-size: 18px;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #layoutCtrl form select, body main #shopHolder #shopMain #shopRightSB #shopSortControls #sortCtrl form select {
+  font-family: "Corbert";
+  font-size: 15px;
+  padding: 7px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(213, 213, 213, 0.8235294118);
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #layoutCtrl form select:focus, body main #shopHolder #shopMain #shopRightSB #shopSortControls #sortCtrl form select:focus {
+  outline: 0;
+}
+body main #shopHolder #shopMain #shopRightSB #shopProductsHolder {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+body footer {
+  font-family: "Corbert";
+  background-color: #151515;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body footer #footerHolder {
+  margin-top: 100px;
+  width: 80%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body footer #footerHolder #footerInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 50px;
+}
+body footer #footerHolder #footerSeparator {
+  width: 100%;
+  height: 0.8px;
+  background-color: #ededed;
+}
+body footer #footerHolder #footerEnd {
+  margin: 25px 0px;
+}/*# sourceMappingURL=style.css.map */
