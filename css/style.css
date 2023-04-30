@@ -573,6 +573,9 @@ body main #mainBanner #bannerUI #bannerControl a {
   text-decoration: none;
 }
 body main #mainBanner #bannerUI #bannerControl #bannerButton {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -583,6 +586,8 @@ body main #mainBanner #bannerUI #bannerControl #bannerButton {
   cursor: pointer;
   transition: 0.2s;
 }
+body main #mainBanner #bannerUI #bannerControl #bannerButton p {
+  margin-left: 10px;
 body main #mainBanner #bannerUI #bannerControl #bannerButton:hover {
   background-color: rgb(0, 94, 255);
   transform: translateX(5px);
@@ -1369,4 +1374,227 @@ body footer #footerHolder #footerSeparator {
 }
 body footer #footerHolder #footerEnd {
   margin: 25px 0px;
+}/*# sourceMappingURL=style.css.map */
+
+@media screen and (max-width: 1441px) {
+body main #shopHolder #shopMain {
+  width: 100%;
+}
+body main #contactHolder #contactMain #contactSidePanel {
+  width: 25%;
+}
+body main #contactHolder #contactMain #contactInputPanel {
+  width: 72%;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody {
+  width: 100%;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody tr td #inputMessageHolder #messageInput {
+  min-width: 100%;
+  max-width: 100%;
+}
+}
+@media screen and (max-width: 1025px) {
+.mainBlock {
+  width: 90%;
+}
+.whyUsItem {
+  padding: 5px;
+}
+.whyUsItem .whyUsItem-Icon {
+  font-size: 45px;
+}
+.whyUsItem .whyUsItem-text {
+  padding: 0px;
+}
+.whyUsItem .whyUsItem-text h5 {
+  font-size: 17px;
+}
+.whyUsItem .whyUsItem-text p {
+  font-size: 11px;
+}
+.footerInfoBlock {
+  width: 24%;
+}
+.shopProduct .productBody .productName {
+  font-size: 13px;
+  height: 38px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: pre-wrap;
+}
+.shopProduct .productBody .productBrand {
+  font-size: 12px;
+}
+.shopProduct .productBody .productPrices .currentPrice {
+  font-size: 17px;
+}
+.shopProduct .productBody .productPrices .oldPrice {
+  font-size: 11px;
+}
+.shopProduct .productBody .productRating i {
+  font-size: 14px;
+}
+.filterBlock .filterHead h3 {
+  font-size: 17px;
+}
+.filterBlock .filterHead .filterHeadUnderline {
+  height: 2px;
+}
+.filterBlock .filterBody .filterCheckDevices label {
+  font-size: 16px;
+}
+.inputHelp {
+  font-size: 14px;
+}
+body header #logo h1 {
+  font-size: 35px;
+}
+body main #standardHeader {
+  height: 200px;
+}
+body main #standardHeader #standardHeaderLeft {
+  width: 60%;
+}
+body main #standardHeader #standardHeaderLeft h2 {
+  font-size: 27px;
+}
+body main #standardHeader #standardHeaderRight {
+  width: 40%;
+}
+body main #mainBanner #bannerUI #bannerHeading {
+  width: 65%;
+}
+body main #mainBanner #bannerUI #bannerHeading h2 {
+  font-size: 27px;
+}
+body main #mainBanner #bannerUI #bannerControl #bannerButton i {
+  font-size: 18px;
+}
+body main #mainBanner #bannerUI #bannerControl #bannerButton p {
+  font-size: 14px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-heading h4 {
+  font-size: 25px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-heading h5 {
+  font-size: 22px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-email form #inputEmail {
+  padding: 10px 25px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-email form #inputEmail #newsLetterEmail {
+  font-size: 17px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-left #newsLetter-subscribe #newsLetter-email form #inputEmail i {
+  font-size: 26px;
+}
+body main #newsLetter #newsLetter-back #newsLetter-right img {
+  width: 75%;
+}
+body main #whyUs #whyUsSeparator {
+  margin: 0px 5px;
+}
+body main #shopHolder #shopMain #shopLeftSB #filterForm #filterSearch #inputSearch {
+  font-size: 14px;
+}
+body main #shopHolder #shopMain #shopLeftSB #filterForm #filterSearch #startSearchBtn {
+  font-size: 19px;
+}
+body main #shopHolder #shopMain #shopLeftSB #filterForm #filterChooseBrand li {
+  font-size: 16px;
+}
+body main #shopHolder #shopMain #shopLeftSB #filterForm #filterPriceControls #minPriceBox p, body main #shopHolder #shopMain #shopLeftSB #filterForm #filterPriceControls #maxPriceBox p {
+  font-size: 17px;
+}
+body main #shopHolder #shopMain #shopLeftSB #filterForm #filterSale li {
+  font-size: 16px;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #layoutCtrl i {
+  font-size: 23px;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #layoutCtrl p {
+  font-size: 16px;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #sortCtrl form label {
+  font-size: 16px;
+}
+body main #shopHolder #shopMain #shopRightSB #shopSortControls #sortCtrl form select {
+  font-size: 14px;
+}
+body main #contactHolder #contactMain #contactInputPanel h2 {
+  font-size: 24px;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody tr td label {
+  font-size: 18px;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody tr td input, body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody tr td textarea {
+  font-size: 18px;
+}
+body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody tr td #inputButtonsHolder #submitButton, body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody tr td #inputButtonsHolder #resetButton {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 4px 15px;
+}
+body main #aboutAuthorHolder #authorMain #authorMainText p {
+  font-size: 19px;
+}
+body main #aboutAuthorHolder #authorMain #authorMainPortrait img {
+  height: 570px;
+}
+body main #regFormHolder #registerMain #loginSection, body main #regFormHolder #registerMain #registrationSection {
+  width: 52%;
+}
+body main #regFormHolder #registerMain #loginSection {
+  height: 40vh;
+}
+body main #regFormHolder #registerMain #registrationSection {
+  height: 70vh;
+}
+body main #cartHolder #cartMain #cartTableHolder table thead tr th {
+  font-size: 15px;
+}
+body main #cartHolder #cartMain #cartTableHolder table #cartBody tr td {
+  padding: 10px 5px;
+}
+body main #cartHolder #cartMain #cartTableHolder table #cartBody tr td p {
+  font-size: 14px;
+}
+body main #cartHolder #cartMain #cartTableHolder table #cartBody tr td i {
+  font-size: 24px;
+}
+body main #cartHolder #cartMain #cartPanel #discountCodeSection #discountForm {
+  padding: 5px;
+}
+body main #cartHolder #cartMain #cartPanel #discountCodeSection #discountForm #discountInput {
+  font-size: 16px;
+}
+body main #cartHolder #cartMain #cartPanel #discountCodeSection #discountForm #applyDiscountButton p {
+  font-size: 17px;
+}
+body main #cartHolder #cartMain #cartPanel #totalSection h4 {
+  font-size: 15px;
+}
+body main #cartHolder #cartMain #cartPanel #totalSection p {
+  font-size: 14px;
+}
+body main #cartHolder #cartMain #cartPanel #orderSection #loginTip {
+  font-size: 14px;
+}
+body main #cartHolder #cartMain #cartPanel #orderSection #checkoutFormButton p {
+  font-size: 12px;
+}
+body footer #footerHolder {
+  width: 100%;
+  margin-top: 60px;
+}
+body footer #footerHolder #footerInfo {
+  justify-content: space-evenly;
+}
+body footer #footerHolder #footerEnd {
+  margin: 20px 0px;
+}
 }/*# sourceMappingURL=style.css.map */
