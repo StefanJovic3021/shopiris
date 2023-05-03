@@ -989,7 +989,7 @@ $(document).ready(function(){
                 totalSection.innerHTML += `<br/><h4>TOTAL: $${totalPrice}</h4>`;
             }
 
-            if (cartList == null){
+            if (cartList == null || cartList.length == 0){
                 cartContainer.innerHTML = "<div id='emptyCartMessage'><span>Your cart is empty</span></div>";
                 totalSection.innerHTML = "<h3>EMPTY CART</h3>"
             }
