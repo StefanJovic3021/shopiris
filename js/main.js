@@ -112,7 +112,7 @@ $(document).ready(function(){
         $('#account-username').text(loginObj.username);
         $('#account-email').text(loginObj.email);
         $('#accountOption').html(`<i class="las la-times-circle"></i>`);
-        if (document.location.pathname == "/registration.html"){
+        if (document.location.pathname == "/shopiris/registration.html"){
             deleteLocalStorage("loginStatus");
             window.location.href = "/shopiris/index.html";
         }
