@@ -1,0 +1,424 @@
+//BIG LAPTOP SCREENS (1440x1080 OR 1440x900)
+@media screen and (max-width: 1441px){
+    .footerInfoBlock{
+        #paymentOptions{
+            ul{
+                li{
+                    img{
+                        width: 45px;
+                    }
+                }
+            }
+        }
+    }
+    body{
+        main{
+            #shopHolder{
+                #shopMain{
+                    width: 100%;
+                }
+            }
+            #contactHolder{
+                #contactMain{
+                    #contactSidePanel{
+                        width: 25%;
+                    }
+                    #contactInputPanel{
+                        width: 72%;
+                        #contactForm{
+                            table{
+                                tbody{
+                                    width: 100%;
+                                    tr{
+                                        td{
+                                            #inputMessageHolder{
+                                                #messageInput{
+                                                    min-width: 100%;
+                                                    max-width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//NORMAL LAPTOP SCREENS (1024x768 OR 1024x600)
+@media screen and (max-width: 1025px){
+
+    .mainBlock{
+        width: 90%;
+    }
+    .whyUsItem{
+        padding: 5px;
+        .whyUsItem-Icon{
+            font-size: 45px;
+        }
+        .whyUsItem-text{
+            padding: 0px;
+            h5{
+                font-size: 17px;
+            }
+            p{
+                font-size: 11px;
+            }
+        }
+    }
+    .footerInfoBlock{
+        width: 24%;
+        #paymentOptions{
+            ul{
+                li{
+                    img{
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .shopProduct{
+        .productBody{
+            .productName{
+                font-size: 13px;
+                height: 38px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                white-space: pre-wrap;
+            }
+            .productBrand{
+                font-size: 12px;
+            }
+            .productPrices{
+                .currentPrice{
+                    font-size: 17px;
+                }
+                .oldPrice{
+                    font-size: 11px;
+                }
+            }
+            .productRating{
+                i{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .filterBlock{
+        .filterHead{
+            h3{
+                font-size: 17px;
+            }
+            .filterHeadUnderline{
+                height: 2px;
+            }
+        }
+        .filterBody{
+            .filterCheckDevices{
+                label{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .inputHelp{
+        font-size: 14px;
+    }
+
+    body{
+        header{
+            #logo{
+                h1{
+                    font-size: 35px;
+                }
+            }
+        }
+        main{
+            #standardHeader{
+                height: 200px;
+                #standardHeaderLeft{
+                    width: 60%;
+                    h2{
+                        font-size: 27px;
+                    }
+                }
+                #standardHeaderRight{
+                    width: 40%;
+                }
+            }
+            #mainBanner{
+                #bannerUI{
+                    #bannerHeading{
+                        width: 65%;
+                        h2{
+                            font-size: 27px;
+                        }
+                    }
+                    #bannerControl{
+                        #bannerButton{
+                            i{
+                                font-size: 18px;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            #newsLetter{
+                #newsLetter-back{
+                    #newsLetter-left{
+                        #newsLetter-subscribe{
+                            #newsLetter-heading{
+                                h4{
+                                    font-size: 25px;
+                                }
+                                h5{
+                                    font-size: 22px;
+                                }
+                            }
+                            #newsLetter-email{
+                                form{
+                                    #inputEmail{
+                                        padding: 10px 25px;
+                                        #newsLetterEmail{
+                                            font-size: 17px;
+                                        }
+                                        i{
+                                            font-size: 26px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #newsLetter-right{
+                        img{
+                            width: 75%;
+                        }
+                    }
+                }
+            }
+            #whyUs{
+                #whyUsSeparator{
+                    margin: 0px 5px;
+                }
+            }
+            #shopHolder{
+                #shopMain{
+                    #shopLeftSB{
+                        #filterForm{
+                            #filterSearch{
+                                #inputSearch{
+                                    font-size: 14px;
+                                }
+                                #startSearchBtn{
+                                    font-size: 19px;
+                                }
+                            }
+                            #filterChooseBrand{
+                                li{
+                                    font-size: 16px;
+                                }
+                            }
+                            #filterPriceControls{
+                                #minPriceBox, #maxPriceBox{
+                                    p{
+                                        font-size: 17px;
+                                    }
+                                }
+                                
+                            }
+                            #filterSale{
+                                li{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    #shopRightSB{
+                        #shopSortControls{
+                            #layoutCtrl{
+                                i{
+                                    font-size: 23px;
+                                }
+                                p{
+                                    font-size: 16px;
+                                }
+                            }
+                            #sortCtrl{
+                                form{
+                                    label{
+                                        font-size: 16px;
+                                    }
+                                    select{
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #contactHolder{
+                #contactMain{
+                    #contactInputPanel{
+                        h2{
+                            font-size: 24px;
+                        }
+                        #contactForm{
+                            table{
+                                tbody{
+                                    tr{
+                                        td{
+                                            label{
+                                                font-size: 18px;
+                                            }
+                                            input, textarea{
+                                                font-size: 18px;
+                                            }
+                                            #inputButtonsHolder{
+                                                #submitButton, #resetButton{
+                                                    width: max-content;
+                                                    padding: 4px 15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #aboutAuthorHolder{
+                #authorMain{
+                    #authorMainText{
+                        p{
+                            font-size: 19px;
+                        }
+                    }
+                    #authorMainPortrait{
+                        img{
+                            height: 570px;
+                        }
+                    }
+                }
+            }
+            #regFormHolder{
+                #registerMain{
+                    #loginSection, #registrationSection{
+                        width: 52%;
+                    }
+                    #loginSection{
+                        height: 40vh;
+                    }
+                    #registrationSection{
+                        height: 70vh;
+                    }
+                }
+            }
+            #cartHolder{
+                #cartMain{
+                    #cartTableHolder{
+                        table{
+                            thead{
+                                tr{
+                                    th{
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                            #cartBody{
+                                tr{
+                                    td{
+                                        padding: 10px 5px;
+                                        p{
+                                            font-size: 14px;
+                                        }
+                                        i{
+                                            font-size: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #cartPanel{
+                        #discountCodeSection{
+                            #discountForm{
+                                padding: 5px;
+                                #discountInput{
+                                    font-size: 16px;
+                                }
+                                #applyDiscountButton{
+                                    p{
+                                        font-size: 17px;
+                                    }
+                                }
+                            }
+                        }
+                        #totalSection{
+                            h4{
+                                font-size: 15px;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                        #orderSection{
+                            #loginTip{
+                                font-size: 14px;
+                            }
+                            #checkoutFormButton{
+                                p{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            #footerHolder{
+                width: 100%;
+                margin-top: 60px;
+                #footerInfo{
+                    justify-content: space-evenly;
+                }
+                #footerEnd{
+                    margin: 20px 0px;
+                }
+            }
+        }
+    }
+}
+
+//TABLET SCREENS (768x1024)
+@media screen and (max-width: 769px){
+    body{
+        header{
+            justify-content: space-between;
+            #desktop-nav{
+                display: none;
+            }
+            #navOptions{
+                div{
+                    font-size: 37px;
+                }
+                #hamburgerMenu{
+                    display: flex;
+                }
+            }
+        }
+    }
+}
