@@ -167,7 +167,7 @@ $(document).ready(function(){
     });
 
     //INDEX.HTML
-    if (document.location.pathname == "/index.html"){
+    if (document.location.pathname == "/shopiris/index.html"){
         console.log("Im on page", document.location.pathname);
         $('.pictureCarousel').slick({
             fade: true,
@@ -188,7 +188,7 @@ $(document).ready(function(){
     }
     
     //SHOP.HTML
-    if (document.location.pathname == "/shop.html"){
+    if (document.location.pathname == "/shopiris/shop.html"){
 
         let allProducts = [];
         let allBrands = [];
@@ -746,7 +746,7 @@ $(document).ready(function(){
     }
 
     //CONTACT.HTML
-    if (document.location.pathname == "/contact.html"){
+    if (document.location.pathname == "/shopiris/contact.html"){
         //All important inputs as a list
         let importantInputs = document.getElementsByClassName("contactFormInputField");
         //All inputs as independent objects
@@ -882,7 +882,7 @@ $(document).ready(function(){
     }
 
     //CART.HTML
-    if (document.location.pathname == "/cart.html"){
+    if (document.location.pathname == "/shopiris/cart.html"){
         //Coupon code
         let couponCode = {
             "codeString": "web2",
@@ -1097,7 +1097,7 @@ $(document).ready(function(){
     }
 
     //REGISTRATION.HTML
-    if (document.location.pathname == "/registration.html"){
+    if (document.location.pathname == "/shopiris/registration.html"){
         //Drop down menu items and blocks
         let regBirthInputDay = document.getElementById("regBirthInput-Day");
         let regBirthInputMonth = document.getElementById("regBirthInput-Month");
