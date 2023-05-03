@@ -3,7 +3,7 @@ $(document).ready(function(){
     //AJAX
     function ajaxCallBack(file, callback, lsKey){
         $.ajax({
-            url: "/shopiris/data/" + file + ".json",
+            url: "/data/" + file + ".json",
             method: "GET",
             dataType: "json",
             success: function(data){
@@ -19,6 +19,9 @@ $(document).ready(function(){
     }
     function readLocalStorage(item){
         return JSON.parse(localStorage.getItem(item));
+    }
+    function deleteLocalStorage(item){
+        localStorage.removeItem(item);
     }
 
     //Header animations
@@ -58,14 +61,17 @@ $(document).ready(function(){
     //Updating cart icon
     function updateCartIcon(numOfCartItems){
         let bubbleNumValue = document.getElementById("bubbleNumValue");
+        let mobileCartNum = document.getElementById("mobile-cart-num");
         $(bubbleNumValue).parent().addClass('bubbleAnimation');
         setTimeout(function(){
             $(bubbleNumValue).parent().removeClass('bubbleAnimation');
         }, 300);
         bubbleNumValue.innerHTML = numOfCartItems;
+        mobileCartNum.innerHTML = `<p>${numOfCartItems}</p>`;
 
         if (numOfCartItems == 0){
             $(bubbleNumValue).parent().hide();
+            mobileCartNum.innerHTML = "<p>-</p>";
         }
         else{
             $(bubbleNumValue).parent().show();
@@ -82,8 +88,86 @@ $(document).ready(function(){
 
     updateCartIcon(cartList.length);
 
+    //Phone side menu
+    $('#hamburgerMenu').click(function(){
+        $('#phoneSideMenu').show();
+        $('#phoneSideMenu').animate({
+            right: '0'
+        });
+        $('main').addClass('focusFilter');
+    });
+    $('#closeSlideMenu').click(function(){
+        $('#phoneSideMenu').animate({
+            right: '-50%'
+        });
+        $('#phoneSideMenu').hide(200);
+        $('main').removeClass('focusFilter');
+    });
+
+    //Login changes
+    let loginObj = readLocalStorage("loginStatus");
+    if(loginObj){
+        $('#account-empty').addClass("hiddenItem");
+        $('#account-user').removeClass("hiddenItem");
+        $('#account-username').text(loginObj.username);
+        $('#account-email').text(loginObj.email);
+        $('#accountOption').html(`<i class="las la-times-circle"></i>`);
+        if (document.location.pathname == "/registration.html"){
+            deleteLocalStorage("loginStatus");
+            window.location.href = "/index.html";
+        }
+    }
+    else{
+        $('#account-empty').removeClass("hiddenItem");
+        $('#account-user').addClass("hiddenItem");
+        $('#accountOption').html(`<i class="las la-user-circle"></i>`);
+        $('#account-username').text("");
+        $('#account-email').text("");
+    }
+
+    //Phone account buttons
+    let accBtnPress = false;
+    $('#mobile-empty-button').click(function(){
+        if(accBtnPress){
+            accBtnPress = false;
+            $('#mobile-empty-dropIcon').animate({
+                rotate: "0deg"
+            });
+            $('#mobile-empty-body').slideUp(300);
+        }
+        else{
+            accBtnPress = true;
+            $('#mobile-empty-dropIcon').animate({
+                rotate: "180deg"
+            });
+            $('#mobile-empty-body').slideDown(300);
+        }
+    });
+    $('#mobile-account-button').click(function(){
+        if(accBtnPress){
+            accBtnPress = false;
+            $('#mobile-account-dropIcon').animate({
+                rotate: "0deg"
+            });
+            $('#mobile-account-body').slideUp(300);
+        }
+        else{
+            accBtnPress = true;
+            $('#mobile-account-dropIcon').animate({
+                rotate: "180deg"
+            });
+            $('#mobile-account-body').slideDown(300);
+        }
+    });
+
+    //Phone search
+    let searchQuery = document.getElementById("mobile-inputSearch");
+    $('#mobileSearch i').click(function(){
+        window.location.href = `/shop.html?search=${searchQuery.value}`;
+    });
+
     //INDEX.HTML
-    if (document.location.pathname == "/shopiris/index.html"){
+    if (document.location.pathname == "/index.html"){
         console.log("Im on page", document.location.pathname);
         $('.pictureCarousel').slick({
             fade: true,
@@ -104,7 +188,7 @@ $(document).ready(function(){
     }
     
     //SHOP.HTML
-    if (document.location.pathname == "/shopiris/shop.html"){
+    if (document.location.pathname == "/shop.html"){
 
         let allProducts = [];
         let allBrands = [];
@@ -648,12 +732,21 @@ $(document).ready(function(){
             updateShop(allProducts);
         });
 
+        //SEARCH FROM OTHER PAGE
+        if ((window.location.href).includes("=")){
+            let searchText = (window.location.href).substring((window.location.href).indexOf("=") + 1, (window.location.href).length);
+            inputSearch.value = searchText;
+            inputSearchValue = inputSearch.value;
+            updateShop(allProducts);
+        }
+        
+
         updateShop(allProducts);
         
     }
 
     //CONTACT.HTML
-    if (document.location.pathname == "/shopiris/contact.html"){
+    if (document.location.pathname == "/contact.html"){
         //All important inputs as a list
         let importantInputs = document.getElementsByClassName("contactFormInputField");
         //All inputs as independent objects
@@ -789,7 +882,7 @@ $(document).ready(function(){
     }
 
     //CART.HTML
-    if (document.location.pathname == "/shopiris/cart.html"){
+    if (document.location.pathname == "/cart.html"){
         //Coupon code
         let couponCode = {
             "codeString": "web2",
@@ -803,6 +896,8 @@ $(document).ready(function(){
         let discountInput = document.getElementById("discountInput");
         let applyDiscountButton = document.getElementById("applyDiscountButton");
         let htmlCode = "";
+        //Checkout button
+        let checkoutFormButton = document.getElementById("checkoutButton");
 
         //Dynamic cart filling
         function updateCart(){
@@ -813,31 +908,33 @@ $(document).ready(function(){
             let uniqueIds = [];
             let numerator = 1;
             let totalPrice = 0;
-            cartList.forEach(cartItem => {
-                if (!uniqueIds.includes(cartItem.id)){
-                    htmlCode +=
-                    `
-                        <tr data-itemid="${cartItem.id}">
-                            <td>${numerator++}</td>
-                            <td><img src="images/productImages/${cartItem.mainImage.src}" alt="${cartItem.mainImage.alt}" /></td>
-                            <td><p>${cartItem.name}</p></td>
-                            <td>
-                                <div class="quantityControl" data-function="increase">
-                                    <i class="las la-angle-up"></i>
-                                </div>
-                                <p class="quantityNumber">${countInCart(cartItem.id)}</p>
-                                <div class="quantityControl" data-function="decrease">
-                                    <i class="las la-angle-down"></i>
-                                </div>
-                            </td>
-                            <td>$${rowPrice(cartItem, countInCart(cartItem.id))}</td>
-                            <td class="deleteCartItem"><i class="las la-trash"></i></td>
-                        </tr>
-                    `;
-                    totalPrice += rowPrice(cartItem, countInCart(cartItem.id), true);
-                }
-                uniqueIds.push(cartItem.id);
-            });
+            if (cartList != null){
+                cartList.forEach(cartItem => {
+                    if (!uniqueIds.includes(cartItem.id)){
+                        htmlCode +=
+                        `
+                            <tr data-itemid="${cartItem.id}">
+                                <td>${numerator++}</td>
+                                <td><img src="images/productImages/${cartItem.mainImage.src}" alt="${cartItem.mainImage.alt}" /></td>
+                                <td><p>${cartItem.name}</p></td>
+                                <td>
+                                    <div class="quantityControl" data-function="increase">
+                                        <i class="las la-angle-up"></i>
+                                    </div>
+                                    <p class="quantityNumber">${countInCart(cartItem.id)}</p>
+                                    <div class="quantityControl" data-function="decrease">
+                                        <i class="las la-angle-down"></i>
+                                    </div>
+                                </td>
+                                <td>$${rowPrice(cartItem, countInCart(cartItem.id))}</td>
+                                <td class="deleteCartItem"><i class="las la-trash"></i></td>
+                            </tr>
+                        `;
+                        totalPrice += rowPrice(cartItem, countInCart(cartItem.id), true);
+                    }
+                    uniqueIds.push(cartItem.id);
+                });
+            }
 
             if(activateCoupon){
                 totalPrice = totalPrice * ((100 - couponCode.codeValue) * 0.01);
@@ -874,7 +971,7 @@ $(document).ready(function(){
                 updateCartIcon(cartList.length);
             });
 
-            if (cartList.length > 0){
+            if (cartList != null){
                 totalSection.innerHTML = "<h4>SUBTOTAL: </h4>";
                 uniqueIds = [];
                 cartList.forEach(listItem => {
@@ -892,7 +989,7 @@ $(document).ready(function(){
                 totalSection.innerHTML += `<br/><h4>TOTAL: $${totalPrice}</h4>`;
             }
 
-            if (cartList.length == 0){
+            if (cartList == null){
                 cartContainer.innerHTML = "<div id='emptyCartMessage'><span>Your cart is empty</span></div>";
                 totalSection.innerHTML = "<h3>EMPTY CART</h3>"
             }
@@ -963,10 +1060,44 @@ $(document).ready(function(){
                 updateCart();
             }
         });
+
+        //Unlocking checkout
+        if(loginObj){
+            checkoutFormButton.removeAttribute("disabled");
+            checkoutFormButton.classList.remove("checkoutDisabledButton");
+            checkoutFormButton.classList.add("activateCheckout");
+        }
+        else{
+            checkoutFormButton.setAttribute("disabled", "disabled");
+            checkoutFormButton.classList.add("checkoutDisabledButton");
+            checkoutFormButton.classList.remove("activateCheckout");
+        }
+
+        //Finishing order
+        $('.activateCheckout').click(function(){
+            cartList = readLocalStorage("cartList");
+            if (cartList.length == 0){
+                $(this).text("CART IS EMPTY");
+                $(this).addClass('checkoutEmptyError');
+                setTimeout(function(){
+                    console.log("ENTER");
+                    $('.activateCheckout').text("PROCEED TO CHECKOUT");
+                    $('.activateCheckout').removeClass('checkoutEmptyError');
+                }, 1500);
+            }
+            else{
+                $(this).text("ORDER SUCCESSFUL");
+                checkoutFormButton.setAttribute("disabled", "disabled");
+                $(this).addClass('checkoutFinished');
+                deleteLocalStorage("cartList");
+                updateCart();
+            }
+        });
+
     }
 
     //REGISTRATION.HTML
-    if (document.location.pathname == "/shopiris/registration.html"){
+    if (document.location.pathname == "/registration.html"){
         //Drop down menu items and blocks
         let regBirthInputDay = document.getElementById("regBirthInput-Day");
         let regBirthInputMonth = document.getElementById("regBirthInput-Month");
@@ -1147,7 +1278,56 @@ $(document).ready(function(){
         let logSubmit = document.getElementById("logSubmit");
 
         logSubmit.addEventListener("click", function(){
-            
+            if (emailLogInput.value != "" && passLogInput != ""){
+                findAccount(emailLogInput.value, passLogInput.value);
+            }
+            if(emailLogInput.value == ""){
+                $('#logEmail').addClass('inputError');
+                $('#emailLogInput').addClass('loginInputError');
+                $('#emailLogInput').attr("placeholder", "Empty field");
+                setTimeout(function(){
+                    $('#logEmail').removeClass('inputError');
+                    $('#emailLogInput').removeClass('loginInputError');
+                    $('#emailLogInput').attr("placeholder", "Email");
+                }, 1000);
+            }
+            if(passLogInput.value == ""){
+                $('#logPassword').addClass('inputError');
+                $('#passLogInput').addClass('loginInputError');
+                $('#passLogInput').attr("placeholder", "Empty field");
+                setTimeout(function(){
+                    $('#logPassword').removeClass('inputError');
+                    $('#passLogInput').removeClass('loginInputError');
+                    $('#passLogInput').attr("placeholder", "Password");
+                }, 1000);
+            }
         });
+
+        //Finding account
+        function findAccount(email, password){
+            let accounts = readLocalStorage("accounts");
+            let account = accounts.filter(x => x.email == email && x.password == password);
+            if (account.length > 0){
+                $('#logSubmit').val("SUCCESSFULY LOGGED IN");
+                setTimeout(function(){
+                    loginUser(account[0]);
+                }, 1000);
+            }
+            else{
+                $('#logSubmit').val("WRONG CREDENTIALS");
+                $('#logSubmit').addClass('loginError');
+                setTimeout(function(){
+                    $('#logSubmit').val("LOG IN");
+                    $('#logSubmit').removeClass('loginError');
+                }, 2000);
+            }
+        }
+
+        //Logging in
+        function loginUser(userAcc){
+            saveInLocalStorage(userAcc, "loginStatus");
+            window.location.href = "/index.html";
+        }
+
     }
   });
