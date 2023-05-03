@@ -114,7 +114,7 @@ $(document).ready(function(){
         $('#accountOption').html(`<i class="las la-times-circle"></i>`);
         if (document.location.pathname == "/registration.html"){
             deleteLocalStorage("loginStatus");
-            window.location.href = "/index.html";
+            window.location.href = "/shopiris/index.html";
         }
     }
     else{
@@ -163,7 +163,7 @@ $(document).ready(function(){
     //Phone search
     let searchQuery = document.getElementById("mobile-inputSearch");
     $('#mobileSearch i').click(function(){
-        window.location.href = `/shop.html?search=${searchQuery.value}`;
+        window.location.href = `/shopiris/shop.html?search=${searchQuery.value}`;
     });
 
     //INDEX.HTML
@@ -1326,7 +1326,7 @@ $(document).ready(function(){
         //Logging in
         function loginUser(userAcc){
             saveInLocalStorage(userAcc, "loginStatus");
-            window.location.href = "/index.html";
+            window.location.href = "/shopiris/index.html";
         }
 
     }
