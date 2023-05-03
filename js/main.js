@@ -3,7 +3,7 @@ $(document).ready(function(){
     //AJAX
     function ajaxCallBack(file, callback, lsKey){
         $.ajax({
-            url: "/data/" + file + ".json",
+            url: "/shopiris/data/" + file + ".json",
             method: "GET",
             dataType: "json",
             success: function(data){
