@@ -177,7 +177,7 @@ $(document).ready(function(){
     //Phone search
     let searchQuery = document.getElementById("mobile-inputSearch");
     $('#mobileSearch i').click(function(){
-        window.location.href = `/shop.html?search=${searchQuery.value}`;
+        window.location.href = `/shopiris/shop.html?search=${searchQuery.value}`;
     });
 
     //INDEX.HTML
