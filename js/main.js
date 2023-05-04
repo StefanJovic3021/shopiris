@@ -3,7 +3,7 @@ $(document).ready(function(){
     //AJAX
     function ajaxCallBack(file, callback, lsKey){
         $.ajax({
-            url: "/data/" + file + ".json",
+            url: "/shopiris/data/" + file + ".json",
             method: "GET",
             dataType: "json",
             success: function(data){
@@ -126,9 +126,9 @@ $(document).ready(function(){
         $('#account-username').text(loginObj.username);
         $('#account-email').text(loginObj.email);
         $('#accountOption').html(`<i class="las la-times-circle"></i>`);
-        if (document.location.pathname == "/registration.html"){
+        if (document.location.pathname == "/shopiris/registration.html"){
             deleteLocalStorage("loginStatus");
-            window.location.href = "/index.html";
+            window.location.href = "/shopiris/index.html";
         }
     }
     else{
@@ -181,8 +181,7 @@ $(document).ready(function(){
     });
 
     //INDEX.HTML
-    if (document.location.pathname == "/index.html"){
-        console.log("Im on page", document.location.pathname);
+    if (document.location.pathname == "/shopiris/shopiris/index.html"){
         $('.pictureCarousel').slick({
             fade: true,
             infinite: true,
@@ -204,7 +203,7 @@ $(document).ready(function(){
     }
     
     //SHOP.HTML
-    if (document.location.pathname == "/shop.html"){
+    if (document.location.pathname == "/shopiris/shop.html"){
 
         let allProducts = [];
         let allBrands = [];
@@ -768,7 +767,7 @@ $(document).ready(function(){
     }
 
     //CONTACT.HTML
-    if (document.location.pathname == "/contact.html"){
+    if (document.location.pathname == "/shopiris/contact.html"){
         //All important inputs as a list
         let importantInputs = document.getElementsByClassName("contactFormInputField");
         //All inputs as independent objects
@@ -904,7 +903,7 @@ $(document).ready(function(){
     }
 
     //CART.HTML
-    if (document.location.pathname == "/cart.html"){
+    if (document.location.pathname == "/shopiris/cart.html"){
         //Coupon code
         let couponCode = {
             "codeString": "web2",
@@ -1123,7 +1122,7 @@ $(document).ready(function(){
     }
 
     //REGISTRATION.HTML
-    if (document.location.pathname == "/registration.html"){
+    if (document.location.pathname == "/shopiris/registration.html"){
         //Drop down menu items and blocks
         let regBirthInputDay = document.getElementById("regBirthInput-Day");
         let regBirthInputMonth = document.getElementById("regBirthInput-Month");
@@ -1348,7 +1347,7 @@ $(document).ready(function(){
         //Logging in
         function loginUser(userAcc){
             saveInLocalStorage(userAcc, "loginStatus");
-            window.location.href = "/index.html";
+            window.location.href = "/shopiris/index.html";
         }
 
     }
