@@ -181,7 +181,7 @@ $(document).ready(function(){
     });
 
     //INDEX.HTML
-    if (document.location.pathname == "/shopiris/shopiris/index.html"){
+    if (document.location.pathname == "/shopiris/index.html"){
         $('.pictureCarousel').slick({
             fade: true,
             infinite: true,
