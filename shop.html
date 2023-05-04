@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS (Using SASS) -->
-    <link rel="stylesheet" href="/shopiris/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
     <header>
@@ -70,7 +70,7 @@
                             <p id="account-empty">Account</p>
                             <div id="mobile-empty-dropIcon"><i class="las la-angle-up"></i></div>
                         </div>
-                        <div id="mobile-empty-body">
+                        <div id="mobile-empty-body" class="hiddenItem">
                             <div id="empty-login"><p>Login</p></div>
                             <div id="empty-register"><p>Register</p></div>
                         </div>
@@ -80,7 +80,7 @@
                             <p id="account-username">Username</p>
                             <div id="mobile-account-dropIcon"><i class="las la-angle-up"></i></div>
                         </div>
-                        <div id="mobile-account-body">
+                        <div id="mobile-account-body" class="hiddenItem">
                             <p id="account-email">user.name@gmail.com</p>
                             <div id="account-logout"><p>Logout</p></div>
                         </div>
@@ -88,10 +88,10 @@
                     
                 </div>
                 <div id="mobile-cart">
-                    <div id="mobile-cart-button">
+                    <a href="cart.html"><div id="mobile-cart-button">
                         <p>Cart</p>
                         <p id="mobile-cart-num">3</p>
-                    </div>
+                    </div></a>
                 </div>
                 <div id="mobile-contact">
                     <div id="mobile-contact-info">
@@ -126,7 +126,10 @@
                     <form action="orders.php" method="GET" id="filterForm">
                         <div class="filterBlock">
                             <div class="filterHead">
-                                <h3>Search</h3>
+                                <div class="filterTitle">
+                                    <h3>Search</h3>
+                                    <i class="las la-angle-up"></i>
+                                </div>
                                 <div class="filterHeadUnderline"></div>
                             </div>
                             <div class="filterBody" id="search">
@@ -137,7 +140,10 @@
                         </div>
                         <div class="filterBlock">
                             <div class="filterHead">
-                                <h3>Device Types</h3>
+                                <div class="filterTitle">
+                                    <h3>Device Types</h3>
+                                    <i class="las la-angle-up"></i>
+                                </div>
                                 <div class="filterHeadUnderline"></div>
                             </div>
                             <div class="filterBody" id="types">
@@ -145,7 +151,10 @@
                         </div>
                         <div class="filterBlock">
                             <div class="filterHead">
-                                <h3>Brands</h3>
+                                <div class="filterTitle">
+                                    <h3>Brands</h3>
+                                    <i class="las la-angle-up"></i>
+                                </div>
                                 <div class="filterHeadUnderline"></div>
                             </div>
                             <div class="filterBody">
@@ -155,7 +164,10 @@
                         </div>
                         <div class="filterBlock">
                             <div class="filterHead">
-                                <h3>Price</h3>
+                                <div class="filterTitle">
+                                    <h3>Price</h3>
+                                    <i class="las la-angle-up"></i>
+                                </div>
                                 <div class="filterHeadUnderline"></div>
                             </div>
                             <div class="filterBody">
@@ -175,7 +187,10 @@
                         </div>
                         <div class="filterBlock">
                             <div class="filterHead">
-                                <h3>Sale</h3>
+                                <div class="filterTitle">
+                                    <h3>Sale</h3>
+                                    <i class="las la-angle-up"></i>
+                                </div>
                                 <div class="filterHeadUnderline"></div>
                             </div>
                             <div class="filterBody" id="sales">
@@ -199,7 +214,7 @@
                     <div id="shopProductsHolder">
                         <div class="shopProduct">
                             <div class="productHead">
-                                <img src="/shopiris/images/firstProduct.jpg" alt="1" class="productImage" />
+                                <img src="images/firstProduct.jpg" alt="1" class="productImage" />
                             </div>
                             <div class="productBody">
                                 <p class="productName">Sony a7 III with 28-70mm f3.5-5.6 OSS Mirrorless Kit</p>
@@ -219,7 +234,7 @@
                         </div>
                         <div class="shopProduct">
                             <div class="productHead">
-                                <img src="/shopiris/images/secondProduct.jpg" alt="2" class="productImage" />
+                                <img src="images/secondProduct.jpg" alt="2" class="productImage" />
                                 <div class="productHeadDiscounts">
                                     <div class="discountName">
                                         <p>Black Friday</p>
@@ -252,7 +267,7 @@
                         </div>
                         <div class="shopProduct">
                             <div class="productHead">
-                                <img src="/shopiris/images/thirdProduct.jpg" alt="3" class="productImage" />
+                                <img src="images/thirdProduct.jpg" alt="3" class="productImage" />
                             </div>
                             <div class="productBody">
                                 <p class="productName">Pentax K-70 with DA 18-135mm f3.5-5.6 WR</p>
@@ -344,11 +359,11 @@
                     </ul>
                     <div id="paymentOptions">
                         <ul>
-                            <li><img src="/shopiris/images/paypal.jpg" alt="paypal" /></li>
-                            <li><img src="/shopiris/images/mastercard.jpg" alt="mastercard" /></li>
-                            <li><img src="/shopiris/images/amazonPay.jpg" alt="amazon_pay" /></li>
-                            <li><img src="/shopiris/images/stripe.jpg" alt="stripe" /></li>
-                            <li><img src="/shopiris/images/visa.jpg" alt="visa" /></li>
+                            <li><img src="/images/paypal.jpg" alt="paypal" /></li>
+                            <li><img src="/images/mastercard.jpg" alt="mastercard" /></li>
+                            <li><img src="/images/amazonPay.jpg" alt="amazon_pay" /></li>
+                            <li><img src="/images/stripe.jpg" alt="stripe" /></li>
+                            <li><img src="/images/visa.jpg" alt="visa" /></li>
                         </ul>
                     </div>
                 </div>
@@ -363,6 +378,6 @@
     <!--Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/shopiris/js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
