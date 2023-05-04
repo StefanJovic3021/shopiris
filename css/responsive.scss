@@ -405,6 +405,32 @@
 
 //TABLET SCREENS (768x1024)
 @media screen and (max-width: 769px){
+
+    .whyUsItem{
+        width: 35%;
+    }
+    .whyUsSeparator{
+        display: none;
+    }
+    .footerInfoBlock{
+        width: 50%;
+    }
+    .offerObject{
+        text-align: center;
+    }
+    .offerObject:nth-child(1){
+        grid-area: left;
+    }
+    .offerObject:nth-child(2){
+        grid-area: center;
+    }
+    .offerObject:nth-child(3){
+        grid-area: right;
+    }
+    .filterBlock{
+        margin: 10px 0px;
+    }
+
     body{
         header{
             justify-content: space-between;
@@ -417,6 +443,249 @@
                 }
                 #hamburgerMenu{
                     display: flex;
+                }
+            }
+        }
+        main{
+            #specialOffers{
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+                grid-template-areas:
+                    "left right"
+                    "center center";
+                img{
+                    width: 70%;
+                }
+            }
+            #whyUs{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            #standardHeader{
+                #standardHeaderLeft{
+                    padding: 70px 100px;
+                }
+            }
+            #shopHolder{
+                #shopMain{
+                    flex-direction: column;
+                    #shopLeftSB, #shopRightSB{
+                        width: 100%;
+                    }
+                }
+            }
+            #contactHolder{
+                #contactMain{
+                    flex-direction: column-reverse;
+                    #contactSidePanel, #contactInputPanel{
+                        width: 100%;
+                    }
+                }
+            }
+            #aboutAuthorHolder{
+                #authorMain{
+                    #authorMainText{
+                        padding: 50px 0px;
+                    }
+                    #authorMainPortrait{
+                        img{
+                            height: 470px;
+                        }
+                    }
+                }
+            }
+            #regFormHolder{
+                #registerMain{
+                    #loginSection, #registrationSection{
+                        width: 70%;
+                        #loginForm, #registerForm{
+                            #logEmail, #logPassword, #regUsername, #regEmail, #regPassword, #regRepeatPassword, #regDateOfBirth{
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+            #cartHolder{
+                #cartMain{
+                    flex-direction: column;
+                    #cartTableHolder, #cartPanel{
+                        width: 100%;
+                        #emptyCartMessage{
+                            margin: 100px 0px;
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            #footerHolder{
+                #footerInfo{
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+//PHONE MEDIUM SCREENS (425x in width)
+@media screen and (max-width: 425px){
+
+    .mainBlock{
+        width: 100%;
+    }
+    .whyUsItem{
+        width: 80%;
+    }
+    .shopProduct{
+        width: 48%;
+        .productBody{
+            .productName{
+                font-size: 15px;
+                height: 45px;
+            }
+            .productBrand{
+                font-size: 14px;
+            }
+            .productPrices{
+                .currentPrice{
+                    font-size: 19px;
+                }
+                .oldPrice{
+                    font-size: 14px;
+                }
+            }
+            .productRating{
+                i{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    body{
+        header{
+            padding: 25px 10px;
+            #phoneSideMenu{
+                width: 70%;
+            }
+        }
+        main{
+            #mainBanner{
+                .pictureCarousel{
+                    width: 100%;
+                    div{
+                        width: 100%;
+                    }
+                }
+                #bannerUI{
+                    bottom: 0;
+                    width: 300px;
+                    padding-bottom: 50px;
+                    padding-left: 10px;
+                    #bannerHeading{
+                        h2{
+                            font-size: 25px;
+                        }
+                    }
+                    #bannerControl{
+                        display: none;
+                    }
+                }
+            }
+            #specialOffers{
+                grid-gap: 10px;
+                img{
+                    width: 90%;
+                }
+            }
+            #newsLetter{
+                #newsLetter-back{
+                    flex-direction: column-reverse;
+                    #newsLetter-left, #newsLetter-right{
+                        width: 100%;
+                    }
+                    #newsLetter-right{
+                        justify-content: center;
+                    }
+                    #newsLetter-left{
+                        text-align: center;
+                    }
+                }
+            }
+            #standardHeader{
+                #standardHeaderLeft{
+                    padding: 50px 2px;
+                    width: max-content;
+                }
+                #standardHeaderRight{
+                    width: 56%;
+                    background-position: center;
+                }
+            }
+            #shopHolder{
+                #shopMain{
+                    flex-direction: column;
+                    #shopLeftSB, #shopRightSB{
+                        width: 100%;
+                    }
+                    #shopRightSB{
+                        #shopProductsHolder{
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+            #contactHolder{
+                #contactMain{
+                    #contactInputPanel{
+                        #contactForm{
+                            table{
+                                tbody{
+                                    tr{
+                                        display: flex;
+                                        flex-direction: column;
+                                        td{
+                                            width: 100%;
+                                            #inputButtonsHolder{
+                                                flex-direction: column;
+                                                align-items: flex-end;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #contactHolder{
+                #contactMain{
+                    flex-direction: column-reverse;
+                    #contactSidePanel, #contactInputPanel{
+                        width: 100%;
+                    }
+                }
+            }
+            #aboutAuthorHolder{
+                #authorMain{
+                    flex-direction: column-reverse;
+                    #authorMainText{
+                        width: 100%;
+                    }
+                }
+            }
+            #regFormHolder{
+                #registerMain{
+                    #loginSection, #registrationSection{
+                        width: 90%;
+                        #loginForm, #registerForm{
+                            #logEmail, #logPassword, #regUsername, #regEmail, #regPassword, #regRepeatPassword, #regDateOfBirth{
+                                width: 90%;
+                            }
+                        }
+                    }
                 }
             }
         }

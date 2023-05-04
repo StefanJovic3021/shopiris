@@ -227,6 +227,30 @@
   }
 }
 @media screen and (max-width: 769px) {
+  .whyUsItem {
+    width: 35%;
+  }
+  .whyUsSeparator {
+    display: none;
+  }
+  .footerInfoBlock {
+    width: 50%;
+  }
+  .offerObject {
+    text-align: center;
+  }
+  .offerObject:nth-child(1) {
+    grid-area: left;
+  }
+  .offerObject:nth-child(2) {
+    grid-area: center;
+  }
+  .offerObject:nth-child(3) {
+    grid-area: right;
+  }
+  .filterBlock {
+    margin: 10px 0px;
+  }
   body header {
     justify-content: space-between;
   }
@@ -238,5 +262,174 @@
   }
   body header #navOptions #hamburgerMenu {
     display: flex;
+  }
+  body main #specialOffers {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "left right" "center center";
+  }
+  body main #specialOffers img {
+    width: 70%;
+  }
+  body main #whyUs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  body main #standardHeader #standardHeaderLeft {
+    padding: 70px 100px;
+  }
+  body main #shopHolder #shopMain {
+    flex-direction: column;
+  }
+  body main #shopHolder #shopMain #shopLeftSB, body main #shopHolder #shopMain #shopRightSB {
+    width: 100%;
+  }
+  body main #contactHolder #contactMain {
+    flex-direction: column-reverse;
+  }
+  body main #contactHolder #contactMain #contactSidePanel, body main #contactHolder #contactMain #contactInputPanel {
+    width: 100%;
+  }
+  body main #aboutAuthorHolder #authorMain #authorMainText {
+    padding: 50px 0px;
+  }
+  body main #aboutAuthorHolder #authorMain #authorMainPortrait img {
+    height: 470px;
+  }
+  body main #regFormHolder #registerMain #loginSection, body main #regFormHolder #registerMain #registrationSection {
+    width: 70%;
+  }
+  body main #regFormHolder #registerMain #loginSection #loginForm #logEmail, body main #regFormHolder #registerMain #loginSection #loginForm #logPassword, body main #regFormHolder #registerMain #loginSection #loginForm #regUsername, body main #regFormHolder #registerMain #loginSection #loginForm #regEmail, body main #regFormHolder #registerMain #loginSection #loginForm #regPassword, body main #regFormHolder #registerMain #loginSection #loginForm #regRepeatPassword, body main #regFormHolder #registerMain #loginSection #loginForm #regDateOfBirth, body main #regFormHolder #registerMain #loginSection #registerForm #logEmail, body main #regFormHolder #registerMain #loginSection #registerForm #logPassword, body main #regFormHolder #registerMain #loginSection #registerForm #regUsername, body main #regFormHolder #registerMain #loginSection #registerForm #regEmail, body main #regFormHolder #registerMain #loginSection #registerForm #regPassword, body main #regFormHolder #registerMain #loginSection #registerForm #regRepeatPassword, body main #regFormHolder #registerMain #loginSection #registerForm #regDateOfBirth, body main #regFormHolder #registerMain #registrationSection #loginForm #logEmail, body main #regFormHolder #registerMain #registrationSection #loginForm #logPassword, body main #regFormHolder #registerMain #registrationSection #loginForm #regUsername, body main #regFormHolder #registerMain #registrationSection #loginForm #regEmail, body main #regFormHolder #registerMain #registrationSection #loginForm #regPassword, body main #regFormHolder #registerMain #registrationSection #loginForm #regRepeatPassword, body main #regFormHolder #registerMain #registrationSection #loginForm #regDateOfBirth, body main #regFormHolder #registerMain #registrationSection #registerForm #logEmail, body main #regFormHolder #registerMain #registrationSection #registerForm #logPassword, body main #regFormHolder #registerMain #registrationSection #registerForm #regUsername, body main #regFormHolder #registerMain #registrationSection #registerForm #regEmail, body main #regFormHolder #registerMain #registrationSection #registerForm #regPassword, body main #regFormHolder #registerMain #registrationSection #registerForm #regRepeatPassword, body main #regFormHolder #registerMain #registrationSection #registerForm #regDateOfBirth {
+    width: 80%;
+  }
+  body main #cartHolder #cartMain {
+    flex-direction: column;
+  }
+  body main #cartHolder #cartMain #cartTableHolder, body main #cartHolder #cartMain #cartPanel {
+    width: 100%;
+  }
+  body main #cartHolder #cartMain #cartTableHolder #emptyCartMessage, body main #cartHolder #cartMain #cartPanel #emptyCartMessage {
+    margin: 100px 0px;
+  }
+  body footer #footerHolder #footerInfo {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 425px) {
+  .mainBlock {
+    width: 100%;
+  }
+  .whyUsItem {
+    width: 80%;
+  }
+  .shopProduct {
+    width: 48%;
+  }
+  .shopProduct .productBody .productName {
+    font-size: 15px;
+    height: 45px;
+  }
+  .shopProduct .productBody .productBrand {
+    font-size: 14px;
+  }
+  .shopProduct .productBody .productPrices .currentPrice {
+    font-size: 19px;
+  }
+  .shopProduct .productBody .productPrices .oldPrice {
+    font-size: 14px;
+  }
+  .shopProduct .productBody .productRating i {
+    font-size: 15px;
+  }
+  body header {
+    padding: 25px 10px;
+  }
+  body header #phoneSideMenu {
+    width: 70%;
+  }
+  body main #mainBanner .pictureCarousel {
+    width: 100%;
+  }
+  body main #mainBanner .pictureCarousel div {
+    width: 100%;
+  }
+  body main #mainBanner #bannerUI {
+    bottom: 0;
+    width: 300px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+  }
+  body main #mainBanner #bannerUI #bannerHeading h2 {
+    font-size: 25px;
+  }
+  body main #mainBanner #bannerUI #bannerControl {
+    display: none;
+  }
+  body main #specialOffers {
+    grid-gap: 10px;
+  }
+  body main #specialOffers img {
+    width: 90%;
+  }
+  body main #newsLetter #newsLetter-back {
+    flex-direction: column-reverse;
+  }
+  body main #newsLetter #newsLetter-back #newsLetter-left, body main #newsLetter #newsLetter-back #newsLetter-right {
+    width: 100%;
+  }
+  body main #newsLetter #newsLetter-back #newsLetter-right {
+    justify-content: center;
+  }
+  body main #newsLetter #newsLetter-back #newsLetter-left {
+    text-align: center;
+  }
+  body main #standardHeader #standardHeaderLeft {
+    padding: 50px 2px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  body main #standardHeader #standardHeaderRight {
+    width: 56%;
+    background-position: center;
+  }
+  body main #shopHolder #shopMain {
+    flex-direction: column;
+  }
+  body main #shopHolder #shopMain #shopLeftSB, body main #shopHolder #shopMain #shopRightSB {
+    width: 100%;
+  }
+  body main #shopHolder #shopMain #shopRightSB #shopProductsHolder {
+    justify-content: center;
+  }
+  body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+  body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody tr td {
+    width: 100%;
+  }
+  body main #contactHolder #contactMain #contactInputPanel #contactForm table tbody tr td #inputButtonsHolder {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  body main #contactHolder #contactMain {
+    flex-direction: column-reverse;
+  }
+  body main #contactHolder #contactMain #contactSidePanel, body main #contactHolder #contactMain #contactInputPanel {
+    width: 100%;
+  }
+  body main #aboutAuthorHolder #authorMain {
+    flex-direction: column-reverse;
+  }
+  body main #aboutAuthorHolder #authorMain #authorMainText {
+    width: 100%;
+  }
+  body main #regFormHolder #registerMain #loginSection, body main #regFormHolder #registerMain #registrationSection {
+    width: 90%;
+  }
+  body main #regFormHolder #registerMain #loginSection #loginForm #logEmail, body main #regFormHolder #registerMain #loginSection #loginForm #logPassword, body main #regFormHolder #registerMain #loginSection #loginForm #regUsername, body main #regFormHolder #registerMain #loginSection #loginForm #regEmail, body main #regFormHolder #registerMain #loginSection #loginForm #regPassword, body main #regFormHolder #registerMain #loginSection #loginForm #regRepeatPassword, body main #regFormHolder #registerMain #loginSection #loginForm #regDateOfBirth, body main #regFormHolder #registerMain #loginSection #registerForm #logEmail, body main #regFormHolder #registerMain #loginSection #registerForm #logPassword, body main #regFormHolder #registerMain #loginSection #registerForm #regUsername, body main #regFormHolder #registerMain #loginSection #registerForm #regEmail, body main #regFormHolder #registerMain #loginSection #registerForm #regPassword, body main #regFormHolder #registerMain #loginSection #registerForm #regRepeatPassword, body main #regFormHolder #registerMain #loginSection #registerForm #regDateOfBirth, body main #regFormHolder #registerMain #registrationSection #loginForm #logEmail, body main #regFormHolder #registerMain #registrationSection #loginForm #logPassword, body main #regFormHolder #registerMain #registrationSection #loginForm #regUsername, body main #regFormHolder #registerMain #registrationSection #loginForm #regEmail, body main #regFormHolder #registerMain #registrationSection #loginForm #regPassword, body main #regFormHolder #registerMain #registrationSection #loginForm #regRepeatPassword, body main #regFormHolder #registerMain #registrationSection #loginForm #regDateOfBirth, body main #regFormHolder #registerMain #registrationSection #registerForm #logEmail, body main #regFormHolder #registerMain #registrationSection #registerForm #logPassword, body main #regFormHolder #registerMain #registrationSection #registerForm #regUsername, body main #regFormHolder #registerMain #registrationSection #registerForm #regEmail, body main #regFormHolder #registerMain #registrationSection #registerForm #regPassword, body main #regFormHolder #registerMain #registrationSection #registerForm #regRepeatPassword, body main #regFormHolder #registerMain #registrationSection #registerForm #regDateOfBirth {
+    width: 90%;
   }
 }/*# sourceMappingURL=responsive.css.map */
