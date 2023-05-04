@@ -3,7 +3,7 @@ $(document).ready(function(){
     //AJAX
     function ajaxCallBack(file, callback, lsKey){
         $.ajax({
-            url: "/shopiris/data/" + file + ".json",
+            url: "/data/" + file + ".json",
             method: "GET",
             dataType: "json",
             success: function(data){
@@ -89,6 +89,13 @@ $(document).ready(function(){
     updateCartIcon(cartList.length);
 
     //Phone side menu
+    let isOnPhone = false;
+    if ((window.screen.width) < 426) isOnPhone = true;
+    else isOnPhone = false;
+    $(window).resize(function(){
+        if ((window.screen.width) < 426) isOnPhone = true;
+        else isOnPhone = false;
+    });
     $('#hamburgerMenu').click(function(){
         $('#phoneSideMenu').show();
         $('#phoneSideMenu').animate({
@@ -97,9 +104,16 @@ $(document).ready(function(){
         $('main').addClass('focusFilter');
     });
     $('#closeSlideMenu').click(function(){
-        $('#phoneSideMenu').animate({
-            right: '-50%'
-        });
+        if (isOnPhone){
+            $('#phoneSideMenu').animate({
+                right: '-80%'
+            });
+        }
+        else{
+            $('#phoneSideMenu').animate({
+                right: '-50%'
+            });
+        }
         $('#phoneSideMenu').hide(200);
         $('main').removeClass('focusFilter');
     });
@@ -112,9 +126,9 @@ $(document).ready(function(){
         $('#account-username').text(loginObj.username);
         $('#account-email').text(loginObj.email);
         $('#accountOption').html(`<i class="las la-times-circle"></i>`);
-        if (document.location.pathname == "/shopiris/registration.html"){
+        if (document.location.pathname == "/registration.html"){
             deleteLocalStorage("loginStatus");
-            window.location.href = "/shopiris/index.html";
+            window.location.href = "/index.html";
         }
     }
     else{
@@ -163,18 +177,20 @@ $(document).ready(function(){
     //Phone search
     let searchQuery = document.getElementById("mobile-inputSearch");
     $('#mobileSearch i').click(function(){
-        window.location.href = `/shopiris/shop.html?search=${searchQuery.value}`;
+        window.location.href = `/shop.html?search=${searchQuery.value}`;
     });
 
     //INDEX.HTML
-    if (document.location.pathname == "/shopiris/index.html"){
+    if (document.location.pathname == "/index.html"){
         console.log("Im on page", document.location.pathname);
         $('.pictureCarousel').slick({
             fade: true,
             infinite: true,
             dots: true,
             speed: 1500,
-            autoplay: true
+            autoplay: true,
+            prevArrow: false,
+            nextArrow: false
         });
         $('#bannerUI').fadeIn(2000);
         $('#specialOffers div:even').css('background-color', '#baff67');
@@ -188,7 +204,7 @@ $(document).ready(function(){
     }
     
     //SHOP.HTML
-    if (document.location.pathname == "/shopiris/shop.html"){
+    if (document.location.pathname == "/shop.html"){
 
         let allProducts = [];
         let allBrands = [];
@@ -739,6 +755,12 @@ $(document).ready(function(){
             inputSearchValue = inputSearch.value;
             updateShop(allProducts);
         }
+
+        //Filters dropdown
+        $('.filterTitle').click(function(){
+            $(this).parent().next().toggle(300);
+            $(this).find('i').toggleClass("rotate");
+        });
         
 
         updateShop(allProducts);
@@ -746,7 +768,7 @@ $(document).ready(function(){
     }
 
     //CONTACT.HTML
-    if (document.location.pathname == "/shopiris/contact.html"){
+    if (document.location.pathname == "/contact.html"){
         //All important inputs as a list
         let importantInputs = document.getElementsByClassName("contactFormInputField");
         //All inputs as independent objects
@@ -882,7 +904,7 @@ $(document).ready(function(){
     }
 
     //CART.HTML
-    if (document.location.pathname == "/shopiris/cart.html"){
+    if (document.location.pathname == "/cart.html"){
         //Coupon code
         let couponCode = {
             "codeString": "web2",
@@ -942,6 +964,14 @@ $(document).ready(function(){
             totalPrice = fancyPrice(totalPrice.toString());
             cartBody.innerHTML = htmlCode;
 
+            //Hide pictures on phone
+            if (isOnPhone){
+                $('table img').addClass("hiddenItem");
+            }
+            else{
+                $('table img').removeClass("hiddenItem");
+            }
+
             $('.quantityControl').click(function(){
                 if ($(this).data("function") == "increase"){
                     let itemId = $(this).parent().parent().data("itemid");
@@ -966,7 +996,6 @@ $(document).ready(function(){
                 let newCartList = cartList.filter(x => x.id != itemId);
                 cartList = newCartList;
                 saveInLocalStorage(cartList, "cartList");
-                console.log(cartList);
                 updateCart();
                 updateCartIcon(cartList.length);
             });
@@ -1000,12 +1029,10 @@ $(document).ready(function(){
         //Functions
         function countInCart(itemId){
             let numberOfItems = (cartList.filter(x => x.id == itemId)).length;
-            console.log(numberOfItems);
             return numberOfItems;
         }
         function rowPrice(cartItem, numberOfItems, totalPrice = false){
             let price = (findNewPrice(cartItem.prices, cartItem.discounts, "number") * numberOfItems).toFixed(2);
-            console.log(price);
             price = price.substring(0, price.indexOf(".")) + price.substring(price.indexOf(".") + 1,  price.length);
             if (totalPrice) return parseFloat(price);
             return fancyPrice(price);
@@ -1080,7 +1107,6 @@ $(document).ready(function(){
                 $(this).text("CART IS EMPTY");
                 $(this).addClass('checkoutEmptyError');
                 setTimeout(function(){
-                    console.log("ENTER");
                     $('.activateCheckout').text("PROCEED TO CHECKOUT");
                     $('.activateCheckout').removeClass('checkoutEmptyError');
                 }, 1500);
@@ -1097,7 +1123,7 @@ $(document).ready(function(){
     }
 
     //REGISTRATION.HTML
-    if (document.location.pathname == "/shopiris/registration.html"){
+    if (document.location.pathname == "/registration.html"){
         //Drop down menu items and blocks
         let regBirthInputDay = document.getElementById("regBirthInput-Day");
         let regBirthInputMonth = document.getElementById("regBirthInput-Month");
@@ -1166,7 +1192,6 @@ $(document).ready(function(){
                     if (accounts.length > 0){
                         let sameAcc = accounts.filter(x => x.email == emailRegValue);
                         if (sameAcc.length > 0){
-                            console.log("Account already in use");
                             regSubmit.classList.add("formButtonFailure");
                             regSubmit.setAttribute("value", "EMAIL ALREADY IN USE");
                             setTimeout(function(){
@@ -1184,7 +1209,6 @@ $(document).ready(function(){
                             }
                             accounts.push(accountObject);
                             saveInLocalStorage(accounts, "accounts");
-                            console.log("Account successfuly created.");
                             //Deactivate button and tell user its successful
                             regSubmit.setAttribute("disabled", "disabled");
                             regSubmit.setAttribute("value", "ACCOUNT SUCCESSFULY CREATED");
@@ -1201,7 +1225,6 @@ $(document).ready(function(){
                         }
                         accounts.push(accountObject);
                         saveInLocalStorage(accounts, "accounts");
-                        console.log("Account successfuly created.");
                         //Deactivate button and tell user its successful
                         regSubmit.setAttribute("disabled", "disabled");
                         regSubmit.setAttribute("value", "ACCOUNT SUCCESSFULY CREATED");
@@ -1209,7 +1232,6 @@ $(document).ready(function(){
                     }
                 }
                 else{
-                    console.log("Something went wrong");
                     if ((usernameRegValue.match(usernameRegex)) == null){
                         let regUsername = document.getElementById("regUsername");
                         showInputError(regUsername, "textInput", "Wrong username format");
@@ -1326,7 +1348,7 @@ $(document).ready(function(){
         //Logging in
         function loginUser(userAcc){
             saveInLocalStorage(userAcc, "loginStatus");
-            window.location.href = "/shopiris/index.html";
+            window.location.href = "/index.html";
         }
 
     }
