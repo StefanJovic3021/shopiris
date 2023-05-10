@@ -7,11 +7,11 @@
 
 @font-face {
   font-family: "Library3AM";
-  src: url("../fonts/Library_3_am.otf");
+  src: url("/fonts/Library_3_am.otf");
 }
 @font-face {
   font-family: "Corbert";
-  src: url("../fonts/Corbert-Regular.ttf");
+  src: url("/fonts/Corbert-Regular.ttf");
 }
 /*COLORS*/
 /*EMPTY*/
@@ -127,6 +127,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footerInfoBlock #paymentOptions ul li img {
   width: 50px;
